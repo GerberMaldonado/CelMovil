@@ -5,38 +5,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static%}
     <title>Bent | App Landing Page</title>
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Owl Carousel Assets -->
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'Principal/css/owl.theme.css' %}" rel="stylesheet">
 
 
     <!-- Pixeden Icon Font -->
-    <link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="{% static 'Principal/css/Pe-icon-7-stroke.css' %}">
 
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/font-awesome.min.css' %}" rel="stylesheet">
 
 
     <!-- PrettyPhoto -->
-    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/prettyPhoto.css' %}" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/style.css' %}" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/animate.css' %}" rel="stylesheet">
     <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="{% static 'Principal/css/responsive.css' %}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,7 +75,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" alt="Logo">
+                            <img src="{% static 'Principal/images/logo.png' %}" alt="Logo">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -119,7 +120,7 @@
                     </div>
                     <div class="col-md-3 col-md-offset-1 col-sm-4">
                         <div class="home-iphone">
-                            <img src="images/iPhone_Home.png" alt="">
+                            <img src="{% static 'Principal/images/iPhone_Home.png' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -129,14 +130,9 @@
 
     <!-- END HEADER SECTION -->
 
-
-
-
  <!-- =========================
      START ABOUT US SECTION
 ============================== -->
-
-
     <section class="about page" id="ABOUT">
         <div class="container">
             <div class="row">
@@ -156,7 +152,7 @@
                     <div class="col-md-6">
                         <div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                         <!-- PHONE -->
-                            <img src="images/about_iphone.png" alt="">
+                            <img src="{% static 'Principal/images/about_iphone.png' %}" alt="">
                         </div>
                     </div>
                     <div class="col-md-6  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
@@ -231,14 +227,9 @@
     </section>
     <!-- End About Us -->
 
-
-
-
-
  <!-- =========================
      START TESTIMONIAL SECTION
 ============================== -->
-
     <section id="TESTIMONIAL" class="testimonial parallax">
         <div class="section_overlay">
             <div class="container">
@@ -259,7 +250,7 @@
                                         <div class="row">
                                             <div class="col-md-12 text-center">
                                                 <!-- IMAGE -->
-                                                <img src="images/client_1.png" alt="">
+                                                <img src="{% static 'Principal/images/client_1.png' %}" alt="">
                                                 <div class="testimonial_caption">
                                                    <!-- DESCRIPTION -->  
                                                     <h2>Jane Smith</h2>
@@ -275,7 +266,7 @@
                                         <div class="row">
                                             <div class="col-md-12 text-center">
                                                  <!-- IMAGE -->
-                                                <img src="images/client_2.png" alt="">
+                                                <img src="{% static 'Principal/images/client_2.png' %}" alt="">
                                                 <div class="testimonial_caption">
                                                 <!-- DESCRIPTION --> 
                                                     <h2>Jane Smith</h2>
@@ -291,7 +282,7 @@
                                         <div class="row">
                                             <div class="col-md-12 text-center">
                                                 <!-- IMAGE -->
-                                                <img src="images/client_3.png" alt="">
+                                                <img src="{% static 'Principal/images/client_3.png' %}" alt="">
                                                 <div class="testimonial_caption">
                                                 <!-- DESCRIPTION --> 
                                                     <h2>Jane Smith</h2>
@@ -309,13 +300,7 @@
             </div>
         </div>
     </section>
-
-
-
     <!-- END TESTIMONIAL SECTION -->
-
-
-
 <!-- =========================
      START FEATURES
 ============================== -->
@@ -378,7 +363,7 @@
                     <div class="col-md-4">
                         <div class="feature_iphone">
                             <!-- FEATURE PHONE IMAGE -->
-                            <img class="wow bounceIn" data-wow-duration="1s" src="images/iPhone02.png" alt="">
+                            <img class="wow bounceIn" data-wow-duration="1s" src="{% static 'Principal/images/iPhone02.png' %}" alt="">
                         </div>
                     </div>
                     <div class="col-md-4 left_no_padding wow fadeInRight" data-wow-duration="1s">
@@ -423,9 +408,6 @@
         </div>
     </section>
     <!-- END FEATURES SECTION -->
-
-
-
 <!-- =========================
      START CALL TO ACTION
 ============================== -->
@@ -443,7 +425,6 @@
     </div>
 
     <!-- END CALL TO ACTION -->
-
 
 <!-- =========================
      Start APPS SCREEN SECTION
@@ -468,40 +449,33 @@
 
                     <!-- APPS SCREEN IMAGES -->
                     <div class="item">
-                    <a href="images/screens/iPhone04.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone04.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                    <a href="images/screens/iPhone04.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone04.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="images/screens/iPhone05.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone05.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="images/screens/iPhone05.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone05.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="images/screens/iPhone06.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone06.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="images/screens/iPhone06.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone06.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="images/screens/iPhone07.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone07.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="images/screens/iPhone07.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone07.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="images/screens/iPhone08.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone08.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="images/screens/iPhone08.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone08.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="images/screens/iPhone09.png" rel="prettyPhoto[pp_gal]"><img src="images/iPhone09.png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="images/screens/iPhone09.png" rel="prettyPhoto[pp_gal]"><img src="{% static 'Principal/images/iPhone09.png' %}" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- ENS APPS SCREEN -->
-
-
-
-
 
 <!-- =========================
      Start FUN FACTS
 ============================== -->
-
 
     <section class="fun_facts parallax">
         <div class="section_overlay">
@@ -542,9 +516,6 @@
 
     <!-- END FUN FACTS -->
 
-
-
-
 <!-- =========================
      START DOWNLOAD NOW 
 ============================== -->
@@ -566,7 +537,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="download_screen text-center wow fadeInUp" data-wow-duration="1s">
-                        <img src="images/download_screen.png" alt="">
+                        <img src="{% static 'Principal/images/download_screen.png' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -698,8 +669,6 @@
      Start Subscription Form 
 ============================== -->
 
-
-
     <section class="subscribe parallax subscribe-parallax" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
         <div class="section_overlay wow lightSpeedIn">
             <div class="container">
@@ -723,7 +692,6 @@
                         <div class="subscription-success"></div>
                         <div class="subscription-error"></div>
 
-
                         <form id="mc-form" class="subscribe_form">
                             <div class="form-group">
                                 <!-- EMAIL INPUT BOX -->
@@ -733,8 +701,6 @@
                                 <!-- SUBSCRIBE BUTTON -->
                             <button type="submit" class="btn btn-default subs-btn">Submit</button>
                         </form>
-
-
                     </div>
                 </div>
             </div>
@@ -742,7 +708,6 @@
     </section>
 
     <!-- END SUBSCRIPBE FORM -->
-
 
 <!-- =========================
      FOOTER 
@@ -769,27 +734,23 @@
     </section>
     <!-- END FOOTER -->
 
-
 <!-- =========================
      SCRIPTS 
 ============================== -->
 
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.parallax-1.1.3.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.ajaxchimp.langs.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/script.js"></script>
-
-
+    <script src="{% static 'Principal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'Principal/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Principal/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.fitvids.js' %}"></script>
+    <script src="{% static 'Principal/js/smoothscroll.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.parallax-1.1.3.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.ajaxchimp.langs.js' %}"></script>
+    <script src="{% static 'Principal/js/wow.min.js' %}"></script>
+    <script src="{% static 'Principal/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'Principal/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'Principal/js/script.js' %}"></script>
 
 </body>
 
