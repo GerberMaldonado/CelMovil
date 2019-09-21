@@ -15,13 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import IndexView, BaseView, ProductosView, OfertasView, ContactoView
+from .views import IndexView
 
 app_name = 'app1'
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
-    path('Base/', BaseView.as_view(), name='base'),
-    path('Productos/', ProductosView.as_view(), name='productos'),
-    path('Ofertas/', OfertasView.as_view(), name='ofertas'),
-    path('Contacto/', ContactoView.as_view(), name='contacto'),
 ]
