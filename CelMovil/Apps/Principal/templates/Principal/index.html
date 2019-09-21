@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static%}
+    <!-- {% load static%} -->
     <title>Bent | App Landing Page</title>
     <!-- Google Font -->
+    
     <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
+
+
     <link href="{% static 'Principal/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Owl Carousel Assets -->
@@ -33,6 +37,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <!-- Style -->
+
+    <link href="{% static 'Principal/css/estilos.css' %}" rel="stylesheet">
     <link href="{% static 'Principal/css/style.css' %}" rel="stylesheet">
 
     <link href="{% static 'Principal/css/animate.css' %}" rel="stylesheet">
@@ -82,13 +88,13 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <!-- NAV -->
-                            <li><a href="#HOME">HOME</a> </li>
-                            <li><a href="#ABOUT">ABOUT </a> </li>
-                            <li><a href="#FEATURES">FEATURES</a></li>
-                            <li><a href="#SCREENS">SCREENS</a> </li>
-                            <li><a href="#DOWNLOAD">DOWNLOAD</a> </li>
-                            <li><a href="#CONTACT">CONTACT</a> </li>
-                            <li><a href="{% url 'app2:admin' %}">LOGIN</a> </li>
+                            <li><a href="#HOME">Inicio</a> </li>
+                            <li><a href="{% url 'app1:productos' %}">Productos </a> </li>
+                            <li><a href="{% url 'app1:ofertas' %}">Ofertas </a> </li>
+                            <li><a href="{% url 'app1:contacto' %}">Contacto </a> </li>
+                             <!--<li><a href="#DOWNLOAD">Login</a> </li>
+                           <li><a href="#CONTACT">CONTACT</a> </li>-->
+                            <li><a href="{% url 'app2:admin' %}">Login</a> </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

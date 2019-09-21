@@ -22,6 +22,36 @@ URL: http://designscrazed.org/
   13. SECTION FOOTER 
 
 */
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+#div1{
+    margin-top: 60px;
+    margin-left: 100px; 
+}
+#div2{
+
+ width: 400px;
+ height: 100px;
+ margin-top: -250px;
+ margin-left: 900px; 
+}
+#div3{
+    margin-top: 400px;
+    margin-left: 400px;
+
+    width: 400px;
+    height: 360px;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
