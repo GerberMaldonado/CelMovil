@@ -14,6 +14,13 @@
 	<meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 	<meta name="author" content="colorlib">
 
+<style>
+	#logo{		
+		color: white;
+		text-align: center;
+	}
+</style>
+
 	<!-- <link rel="icon" href="https://colorlib.com//polygon/admindek/files/assets/images/favicon.ico" type="image/x-icon"> -->
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
@@ -38,11 +45,10 @@
 		<div class="pcoded-container navbar-wrapper">
 			<nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="themelight1" pcoded-header-position="fixed">
 				<div class="navbar-wrapper">
-					<div class="navbar-logo" logo-theme="theme6">
-						<!-- <a href="https://colorlib.com//polygon/admindek/default/index.html"> -->
-							<img class="img-fluid" src="{% static 'Administracion/img/logo.png' %}" alt="UMG">
-						</a>
-						<!-- <a class="mobile-menu" id="mobile-collapse" href="https://colorlib.com//polygon/CelMovil/default/index.html#!"> -->
+					<div class="navbar-logo" logo-theme="theme6">						
+							<!-- <img class="img-fluid" src="{% static 'Administracion/img/logo.png' %}" alt="UMG"> -->
+							<h4 id="logo">CelMovil</h4>
+						</a>						
 							<i class="feather icon-menu icon-toggle-right"></i>
 						</a>
 						<a class="mobile-options waves-effect waves-light">
@@ -64,17 +70,14 @@
 									</div>
 								</div>
 							</li>
-							<li>
-								<!-- <a href="https://colorlib.com//polygon/admindek/default/index.html#!" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:toggleFullScreen()" class="waves-effect waves-light"> -->
-									<i class="full-screen feather icon-maximize"></i>
+							<li>								
+								<i class="full-screen feather icon-maximize"></i>
 								</a>
 							</li>
-						</ul>
-						
+						</ul>						
 					</div>
 				</div>
 			</nav>
-
 			<div id="sidebar" class="users p-chat-user showChat">
 				<div class="had-container">
 					<div class="p-fixed users-main">
@@ -94,23 +97,21 @@
 							</div>
 							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 616px;"><div class="main-friend-list" style="overflow: hidden; width: auto; height: 616px;">
 								<div class="media userlist-box waves-effect waves-light" data-id="1" data-status="online" data-username="Josephin Doe">
-									<a class="media-left" href="https://colorlib.com//polygon/admindek/default/index.html#!">
+									<a class="media-left" href="#">
 										<img class="media-object img-radius img-radius" src="{% static 'Administracion/img/avatar-3.jpg' %}" alt="Generic placeholder image ">
 										<div class="live-status bg-success"></div>
-									</a>
-									
-								</div>
-								
+									</a>									
+								</div>								
 							</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="showChat_inner">
-				
+<!-- 
+			<div class="showChat_inner">				
 				<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 541px;"><div class="main-friend-chat" style="overflow: hidden; width: auto; height: 541px;">
 					<div class="media chat-messages">
-						<a class="media-left photo-table" href="https://colorlib.com//polygon/admindek/default/index.html#!">
+						<a class="media-left photo-table" href="#">
 							<img class="media-object img-radius img-radius m-t-5" src="{% static 'Administracion/img/avatar-2.jpg' %}" alt="Generic placeholder image">
 						</a>
 						<div class="media-body chat-menu-content">
@@ -129,7 +130,7 @@
 						</div>
 					</div>
 					<div class="media chat-messages">
-						<a class="media-left photo-table" href="https://colorlib.com//polygon/admindek/default/index.html#!">
+						<a class="media-left photo-table" href="#">
 							<img class="media-object img-radius img-radius m-t-5" src="{% static 'Administracion/img/avatar-2.jpg' %}" alt="Generic placeholder image">
 						</a>
 						<div class="media-body chat-menu-content">
@@ -150,10 +151,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+
 			<div class="pcoded-main-container" style="margin-top: 70px;">
 				<div class="pcoded-wrapper">
-
 					<nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme1" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
 						<div class="nav-list">
 							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div class="pcoded-inner-navbar main-menu" style="overflow: hidden; width: 100%; height: 100%;">
@@ -162,35 +163,25 @@
 									<li class="pcoded-hasmenu active" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="feather icon-home"></i></span>
-											<span class="pcoded-mtext">Inicio</span>
+											<span class="pcoded-mtext">Usuarios</span>
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="active">
-												<a href="//colorlib.com//polygon/admindek/default/index.html" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Productos</span>
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Ventas</span>
 												</a>
 											</li>
 											<li class="">
-												<a href="//colorlib.com//polygon/admindek/default/dashboard-crm.html" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Ofertas</span>
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Administradores</span>
 												</a>
-											</li>
-											<li class="">
-												<a href="//colorlib.com//polygon/admindek/default/dashboard-crm.html" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Acerca de</span>
-												</a>
-											</li>
-											<li class="">
-												<a href="//colorlib.com//polygon/admindek/default/dashboard-analytics.html" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Login</span>
-												</a>
-											</li>
+											</li>						
 										</ul>
 									</li>
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
-											<span class="pcoded-mtext">Productos</span>
+											<span class="pcoded-mtext">Celulares</span>
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
@@ -199,22 +190,18 @@
 												</a>
 												<ul class="pcoded-submenu">
 													<li class="">
-<!-- ]														<a href="https://colorlib.com//polygon/admindek/default/menu-static.html" class="waves-effect waves-dark"> -->
 															<span class="pcoded-mtext">Static Layout</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-header-fixed.html" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Header Fixed</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-compact.html" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Compact</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-sidebar.html" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Sidebar Fixed</span>
 														</a>
 													</li>
@@ -225,41 +212,37 @@
 													<span class="pcoded-mtext">Horizontal</span>
 												</a>
 												<ul class="pcoded-submenu">
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-horizontal-static.html" target="_blank" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Static Layout</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-horizontal-fixed.html" target="_blank" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Fixed layout</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-horizontal-icon.html" target="_blank" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Static With Icon</span>
 														</a>
 													</li>
-													<li class="">
-														<!-- <a href="https://colorlib.com//polygon/admindek/default/menu-horizontal-icon-fixed.html" target="_blank" class="waves-effect waves-dark"> -->
+													<li class="">														
 															<span class="pcoded-mtext">Fixed With Icon</span>
 														</a>
 													</li>
 												</ul>
 											</li>
 											<li class="">
-												<a href="https://colorlib.com//polygon/admindek/default/menu-bottom.html" class="waves-effect waves-dark">
+												<a href="#" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Bottom Menu</span>
 												</a>
 											</li>
 										</ul>
 									</li>
 									<li class="">
-										<a href="https://colorlib.com//polygon/admindek/default/navbar-light.html" class="waves-effect waves-dark">
+										<a href="#" class="waves-effect waves-dark">
 											<span class="pcoded-micon">
 												<i class="feather icon-menu"></i>
 											</span>
-											<span class="pcoded-mtext">Ofertas</span>
+											<span class="pcoded-mtext">Chips</span>
 										</a>
 									</li>
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
@@ -267,49 +250,100 @@
 											<span class="pcoded-micon">
 												<i class="feather icon-layers"></i>
 											</span>
-											<span class="pcoded-mtext">Acerca de</span>
-											
+											<span class="pcoded-mtext">Repuestos</span>											
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="">
-												<a href="https://colorlib.com//polygon/admindek/default/widget-statistic.html" class="waves-effect waves-dark">
+												<a href="#" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Statistic</span>
 												</a>
 											</li>
 											<li class="">
-												<a href="https://colorlib.com//polygon/admindek/default/widget-data.html" class="waves-effect waves-dark">
+												<a href="#" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Data</span>
 												</a>
 											</li>
 											<li class="">
-												<a href="https://colorlib.com//polygon/admindek/default/widget-chart.html" class="waves-effect waves-dark">
+												<a href="#" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Chart Widget</span>
 												</a>
 											</li>
 										</ul>
 									</li>
-								</ul>
-								
-								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+											<a href="javascript:void(0)" class="waves-effect waves-dark">
+												<span class="pcoded-micon">
+													<i class="feather icon-box"></i>
+												</span>
+												<span class="pcoded-mtext">Accesorios</span>
+											</a>
+											<ul class="pcoded-submenu">
+												<li class="">
+													<a href="#" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Alert</span>
+													</a>
+												</li>											
+											</ul>
+										</li>				
+									</ul>									
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon">
-												<i class="feather icon-box"></i>
+												<i class="feather icon-layers"></i>
 											</span>
-											<span class="pcoded-mtext">Login</span>
+											<span class="pcoded-mtext">Reparaciones</span>
+											
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="">
-												<a href="https://colorlib.com//polygon/admindek/default/alert.html" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Alert</span>
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Statistic</span>
 												</a>
 											</li>
-										
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Data</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Chart Widget</span>
+												</a>
+											</li>
 										</ul>
-									</li>
-			
+									</li>	
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon">
+												<i class="feather icon-layers"></i>
+											</span>
+											<span class="pcoded-mtext">Ventas</span>
+											
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Statistic</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Data</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Chart Widget</span>
+												</a>
+											</li>
+										</ul>
+									</li>									
 								</ul>
-							</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 186.786px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+								
+
+							</div>
+							<div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 186.786px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
 						</div>
 
 					</nav>
@@ -331,10 +365,9 @@
 									<div class="page-header-breadcrumb">
 										<ul class=" breadcrumb breadcrumb-title">
 											<li class="breadcrumb-item">
-												<a href="https://colorlib.com//polygon/admindek/default/index.html"><i class="feather icon-home"></i></a>
+												<a href="#"><i class="feather icon-home"></i></a>
 											</li>
-<!-- 											<li class="breadcrumb-item"><a href="https://colorlib.com//polygon/admindek/default/index.html#!">Dashboard</a> </li>
- -->										</ul>
+										</ul>
 									</div>
 								</div>
 							</div>
@@ -345,289 +378,13 @@
 								<div class="page-wrapper">
 									<div class="page-body">
 										<div class="row">
-											<div class="col-md-12 col-xl-8">
+											<div class="col-md-12 col-xl-12">
 												<div class="card sale-card">
 													<div class="card-header">
-														<h5>Deals Analytics</h5>
+														<h5>Administración</h5>
 													</div>
-													<div class="card-block">
-														
+													<div class="card-block">														
 													</div>
-												</div>
-											</div>
-											<div class="col-md-12 col-xl-4">
-												<div class="card comp-card">
-													<div class="card-body">
-														<div class="row align-items-center">
-															<div class="col">
-																<h6 class="m-b-25">Impressions</h6>
-																<h3 class="f-w-700 text-c-blue">1,563</h3>
-																<p class="m-b-0">May 23 - June 01 (2017)</p>
-															</div>
-															<div class="col-auto">
-																<i class="fas fa-eye bg-c-blue"></i>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card comp-card">
-													<div class="card-body">
-														<div class="row align-items-center">
-															<div class="col">
-																<h6 class="m-b-25">Goal</h6>
-																<h3 class="f-w-700 text-c-green">30,564</h3>
-																<p class="m-b-0">May 23 - June 01 (2017)</p>
-															</div>
-															<div class="col-auto">
-																<i class="fas fa-bullseye bg-c-green"></i>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card comp-card">
-													<div class="card-body">
-														<div class="row align-items-center">
-															<div class="col">
-																<h6 class="m-b-25">Impact</h6>
-																<h3 class="f-w-700 text-c-yellow">42.6%</h3>
-																<p class="m-b-0">May 23 - June 01 (2017)</p>
-															</div>
-															<div class="col-auto">
-																<i class="fas fa-hand-paper bg-c-yellow"></i>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-12">
-												<div class="card proj-progress-card">
-													<div class="card-block">
-														<div class="row">
-															<div class="col-xl-3 col-md-6">
-																<h6>Published Project</h6>
-																<h5 class="m-b-30 f-w-700">532<span class="text-c-green m-l-10">+1.69%</span></h5>
-																<div class="progress">
-																	<div class="progress-bar bg-c-red" style="width:25%"></div>
-																</div>
-															</div>
-															<div class="col-xl-3 col-md-6">
-																<h6>Completed Task</h6>
-																<h5 class="m-b-30 f-w-700">4,569<span class="text-c-red m-l-10">-0.5%</span></h5>
-																<div class="progress">
-																	<div class="progress-bar bg-c-blue" style="width:65%"></div>
-																</div>
-															</div>
-															<div class="col-xl-3 col-md-6">
-																<h6>Successfull Task</h6>
-																<h5 class="m-b-30 f-w-700">89%<span class="text-c-green m-l-10">+0.99%</span></h5>
-																<div class="progress">
-																	<div class="progress-bar bg-c-green" style="width:85%"></div>
-																</div>
-															</div>
-															<div class="col-xl-3 col-md-6">
-																<h6>Ongoing Project</h6>
-																<h5 class="m-b-30 f-w-700">365<span class="text-c-green m-l-10">+0.35%</span></h5>
-																<div class="progress">
-																	<div class="progress-bar bg-c-yellow" style="width:45%"></div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="col-md-12 col-xl-4">
-												<div class="card card-blue text-white">
-													<div class="card-block p-b-0">
-														<div class="row m-b-50">
-															<div class="col">
-																<h6 class="m-b-5">Sales In July</h6>
-																<h5 class="m-b-0 f-w-700">$2665.00</h5>
-															</div>
-															<div class="col-auto text-center">
-																<p class="m-b-5">Direct Sale</p>
-																<h6 class="m-b-0">$1768</h6>
-															</div>
-															<div class="col-auto text-center">
-																<p class="m-b-5">Referal</p>
-																<h6 class="m-b-0">$897</h6>
-															</div>
-														</div>
-														<div id="sec-ecommerce-chart-line" class="" style="height: 60px; padding: 0px; position: relative;"><canvas class="flot-base" width="283" height="60" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 283.656px; height: 60px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 8px; text-align: center;">0.0</div><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 56px; text-align: center;">2.5</div><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 104px; text-align: center;">5.0</div><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 151px; text-align: center;">7.5</div><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 199px; text-align: center;">10.0</div><div style="position: absolute; max-width: 40px; top: 60px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 247px; text-align: center;">12.5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 52px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 37px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 23px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 8px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" width="283" height="60" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 283.656px; height: 60px;"></canvas></div>
-														<div id="sec-ecommerce-chart-bar" style="height: 195px; padding: 0px; position: relative;"><canvas class="flot-base" width="283" height="195" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 283.656px; height: 195px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 6px; text-align: center;">0.0</div><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 54px; text-align: center;">2.5</div><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 103px; text-align: center;">5.0</div><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 152px; text-align: center;">7.5</div><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 200px; text-align: center;">10.0</div><div style="position: absolute; max-width: 35px; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 249px; text-align: center;">12.5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 195px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 163px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">5</div><div style="position: absolute; top: 130px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 98px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">15</div><div style="position: absolute; top: 65px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">25</div><div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" width="283" height="195" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 283.656px; height: 195px;"></canvas></div>
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-4 col-md-12">
-												<div class="card latest-update-card">
-													<div class="card-header">
-														<h5>What’s New</h5>
-														<div class="card-header-right">
-															<ul class="list-unstyled card-option">
-																<li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
-																<li><i class="feather icon-maximize full-card"></i></li>
-																<li><i class="feather icon-minus minimize-card"></i></li>
-																<li><i class="feather icon-refresh-cw reload-card"></i></li>
-																<li><i class="feather icon-trash close-card"></i></li>
-																<li><i class="feather icon-chevron-left open-card-option"></i></li>
-															</ul>
-														</div>
-													</div>
-													<div class="card-block">
-														<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 290px;"><div class="scroll-widget" style="overflow: hidden; width: auto; height: 290px;">
-															<div class="latest-update-box">
-																<div class="row p-t-20 p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<img src="{% static 'Administracion/img/avatar-4.jpg' %}" alt="user image" class="img-radius img-40 align-top m-r-15 update-icon">
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Your Manager Posted.</h6></a>
-																		<p class="text-muted m-b-0">Jonny michel</p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="feather icon-briefcase bg-c-red update-icon"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>You have 3 pending Task.</h6></a>
-																		<p class="text-muted m-b-0">Hemilton</p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="feather icon-check f-w-600 bg-c-green update-icon"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>New Order Received.</h6></a>
-																		<p class="text-muted m-b-0">Hemilton</p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<img src="{% static 'Administracion/img/avatar-4.jpg' %}" alt="user image" class="img-radius img-40 align-top m-r-15 update-icon">
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Your Manager Posted.</h6></a>
-																		<p class="text-muted m-b-0">Jonny michel</p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="feather icon-briefcase bg-c-red update-icon"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>You have 3 pending Task.</h6></a>
-																		<p class="text-muted m-b-0">Hemilton</p>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="feather icon-check f-w-600 bg-c-green update-icon"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>New Order Received.</h6></a>
-																		<p class="text-muted m-b-0">Hemilton</p>
-																	</div>
-																</div>
-															</div>
-														</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 188.565px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-4 col-md-6">
-												<div class="card latest-update-card">
-													<div class="card-header">
-														<h5>Latest Activity</h5>
-														<div class="card-header-right">
-															<ul class="list-unstyled card-option">
-																<li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
-																<li><i class="feather icon-maximize full-card"></i></li>
-																<li><i class="feather icon-minus minimize-card"></i></li>
-																<li><i class="feather icon-refresh-cw reload-card"></i></li>
-																<li><i class="feather icon-trash close-card"></i></li>
-																<li><i class="feather icon-chevron-left open-card-option"></i></li>
-															</ul>
-														</div>
-													</div>
-													<div class="card-block">
-														<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 290px;"><div class="scroll-widget" style="overflow: hidden; width: auto; height: 290px;">
-															<div class="latest-update-box">
-																<div class="row p-t-20 p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-primary update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Devlopment &amp; Update</h6></a>
-																		<p class="text-muted m-b-0">Lorem ipsum dolor sit amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-blue"> More</a></p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-primary update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Showcases</h6></a>
-																		<p class="text-muted m-b-0">Lorem dolor sit amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-blue"> More</a></p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-success update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Miscellaneous</h6></a>
-																		<p class="text-muted m-b-0">Lorem ipsum dolor sit ipsum amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-green"> More</a></p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-danger update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Your Manager Posted.</h6></a>
-																		<p class="text-muted m-b-0">Lorem ipsum dolor sit amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-red"> More</a></p>
-																	</div>
-																</div>
-																<div class="row p-b-30">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-primary update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Showcases</h6></a>
-																		<p class="text-muted m-b-0">Lorem dolor sit amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-blue"> More</a></p>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-auto text-right update-meta p-r-0">
-																		<i class="b-success update-icon ring"></i>
-																	</div>
-																	<div class="col p-l-5">
-																		<a href="https://colorlib.com//polygon/admindek/default/index.html#!"><h6>Miscellaneous</h6></a>
-																		<p class="text-muted m-b-0">Lorem ipsum dolor sit ipsum amet, <a href="https://colorlib.com//polygon/admindek/default/index.html#!" class="text-c-green"> More</a></p>
-																	</div>
-																</div>
-															</div>
-														</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 173.76px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="card table-card">
-													<div class="card-header">
-														<h5>New Products</h5>
-														<div class="card-header-right">
-															<ul class="list-unstyled card-option">
-																<li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
-																<li><i class="feather icon-maximize full-card"></i></li>
-																<li><i class="feather icon-minus minimize-card"></i></li>
-																<li><i class="feather icon-refresh-cw reload-card"></i></li>
-																<li><i class="feather icon-trash close-card"></i></li>
-																<li><i class="feather icon-chevron-left open-card-option"></i></li>
-															</ul>
-														</div>
-													</div>
-													
 												</div>
 											</div>
 										</div>
@@ -666,7 +423,6 @@
 	gtag('js', new Date());
 	gtag('config', 'UA-23581568-13');
 </script>
-
 <div class="flotTip" style="display: none; position: absolute; background: rgb(255, 255, 255); z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap;"></div>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="5f2ca621139ecb5392fe88a7-|49" defer=""></script>
 </body></html>
