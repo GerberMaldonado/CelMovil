@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import AdminView
+from .views import CrearAccesorio
 
-app_name = 'app2'
+app_name = 'Administracion'
+
 urlpatterns = [
     path('admin/', AdminView.as_view(), name='admin'),
+    path('crear_accesorio', CrearAccesorio.as_view(), name='crear_accesorio'),
 ]
