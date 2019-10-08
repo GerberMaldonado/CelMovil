@@ -2,41 +2,35 @@
 <!-- saved from url=(0057)https://colorlib.com//polygon/admindek/default/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>CelMovil</title>
-
 <!--[if lt IE 10]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Admindek Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs.">
 	<meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 	<meta name="author" content="colorlib">
-
 <style>
 	#logo{		
 		color: white;
 		text-align: center;
 	}
 </style>
-
 	<!-- <link rel="icon" href="https://colorlib.com//polygon/admindek/files/assets/images/favicon.ico" type="image/x-icon"> -->
-
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet"> -->
 	{% load static%} 
 	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/bootstrap.min.css' %}">	
 	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/waves.min.css' %}" media="all">
-	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/feather.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/icomoon.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/feather.css' %}">	
 	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/font-awesome-n.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/chartist.css' %}" media="all">
 	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/style.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/widget.css' %}">	
-
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/widget.css' %}">		
 </head>
 <body themebg-pattern="theme1">
-
 	<div class="loader-bg" style="display: none;">
 		<div class="loader-bar"></div>
 	</div>
@@ -46,9 +40,11 @@
 			<nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="themelight1" pcoded-header-position="fixed">
 				<div class="navbar-wrapper">
 					<div class="navbar-logo" logo-theme="theme6">						
-							<!-- <img class="img-fluid" src="{% static 'Administracion/img/logo.png' %}" alt="UMG"> -->
+						<a href="{% url 'Administracion:Home' %}">
+							<!-- <img class="img-fluid" src="./img/logo.png" alt="Theme-Logo"> -->
 							<h4 id="logo">CelMovil</h4>
-						</a>						
+						</a>
+						<a class="mobile-menu" id="mobile-collapse" href="">
 							<i class="feather icon-menu icon-toggle-right"></i>
 						</a>
 						<a class="mobile-options waves-effect waves-light">
@@ -56,114 +52,82 @@
 						</a>
 					</div>
 					<div class="navbar-container container-fluid">
-						<ul class="nav-left">
-							<li class="header-search">
-								<div class="main-search morphsearch-search">
-									<div class="input-group">
-										<span class="input-group-prepend search-close">
-											<i class="feather icon-x input-group-text"></i>
-										</span>
-										<input type="text" class="form-control" placeholder="Enter Keyword">
-										<span class="input-group-append search-btn">
-											<i class="feather icon-search input-group-text"></i>
-										</span>
+						<ul class="nav-right">
+							<li class="header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="dropdown-toggle" data-toggle="dropdown">
+										<i class="feather icon-bell"></i>
+										<span class="badge bg-c-red">5</span>
+									</div>
+									<ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+										<li>
+											<h6>Notificaciones</h6>
+											<label class="label label-danger">Nueva</label>
+										</li>
+										<li>
+											<div class="media">
+												<img class="img-radius" src="{% static 'Administracion/img/avatar-4.jpg' %}" alt="Generic placeholder image">
+												<div class="media-body">
+													<h5 class="notification-user">John Doe</h5>
+													<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+													<span class="notification-time">30 minutes ago</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+										<i class="feather icon-message-square"></i>
+										<span class="badge bg-c-green">3</span>
 									</div>
 								</div>
 							</li>
-							<li>								
-								<i class="full-screen feather icon-maximize"></i>
-								</a>
+							<li class="user-profile header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="dropdown-toggle" data-toggle="dropdown">
+										<img src="{% static 'Administracion/img/avatar-4.jpg' %}" class="img-radius" alt="User-Profile-Image">
+										<span>Carol López</span>
+										<i class="feather icon-chevron-down"></i>
+									</div>
+									<ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+										<li>
+											<a href="">
+												<i class="feather icon-settings"></i> Configuraciones
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="feather icon-user"></i> Perfil
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="feather icon-log-out"></i> Cerrar Sesión
+											</a>
+										</li>
+									</ul>
+								</div>
 							</li>
-						</ul>						
-					</div>
+						</ul>
+					</div>		
 				</div>
 			</nav>
-			<div id="sidebar" class="users p-chat-user showChat">
-				<div class="had-container">
-					<div class="p-fixed users-main">
-						<div class="user-box">
-							<div class="chat-search-box">
-								<a class="back_friendlist">
-									<i class="feather icon-x"></i>
-								</a>
-								<div class="right-icon-control">
-									<div class="input-group input-group-button">
-										<input type="text" id="search-friends" name="footer-email" class="form-control" placeholder="Search Friend">
-										<div class="input-group-append">
-											<button class="btn btn-primary waves-effect waves-light" type="button"><i class="feather icon-search"></i></button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 616px;"><div class="main-friend-list" style="overflow: hidden; width: auto; height: 616px;">
-								<div class="media userlist-box waves-effect waves-light" data-id="1" data-status="online" data-username="Josephin Doe">
-									<a class="media-left" href="#">
-										<img class="media-object img-radius img-radius" src="{% static 'Administracion/img/avatar-3.jpg' %}" alt="Generic placeholder image ">
-										<div class="live-status bg-success"></div>
-									</a>									
-								</div>								
-							</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 
-			<div class="showChat_inner">				
-				<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 541px;"><div class="main-friend-chat" style="overflow: hidden; width: auto; height: 541px;">
-					<div class="media chat-messages">
-						<a class="media-left photo-table" href="#">
-							<img class="media-object img-radius img-radius m-t-5" src="{% static 'Administracion/img/avatar-2.jpg' %}" alt="Generic placeholder image">
-						</a>
-						<div class="media-body chat-menu-content">
-							<div class="">
-								<p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
-							</div>
-							<p class="chat-time">8:20 a.m.</p>
-						</div>
-					</div>
-					<div class="media chat-messages">
-						<div class="media-body chat-menu-reply">
-							<div class="">
-								<p class="chat-cont">Ohh! very nice</p>
-							</div>
-							<p class="chat-time">8:22 a.m.</p>
-						</div>
-					</div>
-					<div class="media chat-messages">
-						<a class="media-left photo-table" href="#">
-							<img class="media-object img-radius img-radius m-t-5" src="{% static 'Administracion/img/avatar-2.jpg' %}" alt="Generic placeholder image">
-						</a>
-						<div class="media-body chat-menu-content">
-							<div class="">
-								<p class="chat-cont">can you come with me?</p>
-							</div>
-							<p class="chat-time">8:20 a.m.</p>
-						</div>
-					</div>
-				</div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-				<div class="chat-reply-box">
-					<div class="right-icon-control">
-						<div class="input-group input-group-button">
-							<input type="text" class="form-control" placeholder="Write hear . . ">
-							<div class="input-group-append">
-								<button class="btn btn-primary waves-effect waves-light" type="button"><i class="feather icon-message-circle"></i></button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-
 			<div class="pcoded-main-container" style="margin-top: 70px;">
 				<div class="pcoded-wrapper">
 					<nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme1" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
 						<div class="nav-list">
 							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div class="pcoded-inner-navbar main-menu" style="overflow: hidden; width: 100%; height: 100%;">
 								<div class="pcoded-navigation-label" menu-title-theme="theme1">Navegación</div>
-								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
-									<li class="pcoded-hasmenu active" dropdown-icon="style1" subitem-icon="style1">
+								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">									
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon"><i class="feather icon-home"></i></span>
-											<span class="pcoded-mtext">Usuarios</span>
+											<span class="pcoded-micon">
+												<i class="fa fa-user"></i>
+											</span>
+											<span class="pcoded-mtext">Clientes</span>
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="active">
@@ -180,92 +144,13 @@
 									</li>
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+											<span class="pcoded-micon"><i class="fa fa-mobile"></i></span>
 											<span class="pcoded-mtext">Celulares</span>
 										</a>
 										<ul class="pcoded-submenu">
-											<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
-												<a href="javascript:void(0)" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Vertical</span>
-												</a>
-												<ul class="pcoded-submenu">
-													<li class="">
-															<span class="pcoded-mtext">Static Layout</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Header Fixed</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Compact</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Sidebar Fixed</span>
-														</a>
-													</li>
-												</ul>
-											</li>
-											<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
-												<a href="javascript:void(0)" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Horizontal</span>
-												</a>
-												<ul class="pcoded-submenu">
-													<li class="">														
-															<span class="pcoded-mtext">Static Layout</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Fixed layout</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Static With Icon</span>
-														</a>
-													</li>
-													<li class="">														
-															<span class="pcoded-mtext">Fixed With Icon</span>
-														</a>
-													</li>
-												</ul>
-											</li>
 											<li class="">
 												<a href="#" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Bottom Menu</span>
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="">
-										<a href="#" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="feather icon-menu"></i>
-											</span>
-											<span class="pcoded-mtext">Chips</span>
-										</a>
-									</li>
-									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
-										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="feather icon-layers"></i>
-											</span>
-											<span class="pcoded-mtext">Repuestos</span>											
-										</a>
-										<ul class="pcoded-submenu">
-											<li class="">
-												<a href="#" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Statistic</span>
-												</a>
-											</li>
-											<li class="">
-												<a href="#" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Data</span>
-												</a>
-											</li>
-											<li class="">
-												<a href="#" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Chart Widget</span>
 												</a>
 											</li>
 										</ul>
@@ -274,26 +159,52 @@
 										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 											<a href="javascript:void(0)" class="waves-effect waves-dark">
 												<span class="pcoded-micon">
-													<i class="feather icon-box"></i>
+													<i class="icon-sim_card"></i>
+												</span>
+												<span class="pcoded-mtext">Chips</span>
+											</a>
+											<ul class="pcoded-submenu">
+												<li class="">
+													<a href="{% url 'Administracion:CrearAccesorio' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Registrar Accesorio</span>
+													</a>
+												</li>		
+												<li class="">
+													<a href="{% url 'Administracion:CrearAccesorio' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Listado de Accesorios</span>
+													</a>
+												</li>										
+											</ul>
+										</li>				
+									</ul>
+									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+											<a href="javascript:void(0)" class="waves-effect waves-dark">
+												<span class="pcoded-micon">
+													<i class="fa fa-plug"></i>
 												</span>
 												<span class="pcoded-mtext">Accesorios</span>
 											</a>
 											<ul class="pcoded-submenu">
 												<li class="">
-													<a href="#" class="waves-effect waves-dark">
-														<span class="pcoded-mtext">Alert</span>
+													<a href="{% url 'Administracion:ListarAccesorio' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Listar Accesorios</span>
 													</a>
-												</li>											
+												</li>		
+												<li class="">
+													<a href="{% url 'Administracion:CrearAccesorio' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Registrar Accesorios</span>
+													</a>
+												</li>										
 											</ul>
 										</li>				
-									</ul>									
+									</ul>
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon">
-												<i class="feather icon-layers"></i>
+												<i class="fa fa-wrench"></i>
 											</span>
-											<span class="pcoded-mtext">Reparaciones</span>
-											
+											<span class="pcoded-mtext">Reparaciones</span>											
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="">
@@ -316,10 +227,9 @@
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon">
-												<i class="feather icon-layers"></i>
+												<i class="fa fa-truck"></i>
 											</span>
-											<span class="pcoded-mtext">Ventas</span>
-											
+											<span class="pcoded-mtext">Repuestos</span>											
 										</a>
 										<ul class="pcoded-submenu">
 											<li class="">
@@ -338,26 +248,86 @@
 												</a>
 											</li>
 										</ul>
-									</li>									
+									</li>						
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon">
+												<i class="icon-dollar"></i>
+											</span>
+											<span class="pcoded-mtext">Ventas</span>										
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Statistic</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Data</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Chart Widget</span>
+												</a>
+											</li>
+										</ul>
+									</li>
 								</ul>
-								
-
+								<div class="pcoded-navigation-label" menu-title-theme="theme1">Administración</div>									
+								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon"><i class="fa fa-users"></i></span>
+											<span class="pcoded-mtext">Empleados</span>
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="active">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Ventas</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Administradores</span>
+												</a>
+											</li>						
+										</ul>
+									</li>	
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon"><i class="fa fa-users"></i></span>
+											<span class="pcoded-mtext">Usuarios</span>
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="active">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Ventas</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="#" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Administradores</span>
+												</a>
+											</li>						
+										</ul>
+									</li>																						
+								</ul>							
 							</div>
-							<div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 186.786px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+							<div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 186.786px;"></div>
+							<div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
 						</div>
-
 					</nav>
-
 					<div class="pcoded-content">
-
 						<div class="page-header card">
 							<div class="row align-items-end">
 								<div class="col-lg-8">
 									<div class="page-header-title">
 										<i class="feather icon-home bg-c-blue"></i>
 										<div class="d-inline">
-											<h5>Bienvenidos a nuestra pagina "CelMovil"</h5>
-											<span>Visitenos y se convenserá de nuestro servicio le atendemos de Lunes a Sabado de 8.00 AM 6.00 PM </span>
+											{% block header %}									
+											{% endblock %} 	
 										</div>
 									</div>
 								</div>
@@ -365,29 +335,23 @@
 									<div class="page-header-breadcrumb">
 										<ul class=" breadcrumb breadcrumb-title">
 											<li class="breadcrumb-item">
-												<a href="#"><i class="feather icon-home"></i></a>
+												<a href="{% url 'Administracion:Home' %}">
+													<i class="feather icon-home"></i>
+												</a>
 											</li>
+											{% block home %}									
+											{% endblock %} 																				
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-
 						<div class="pcoded-inner-content">
 							<div class="main-body">
 								<div class="page-wrapper">
-									<div class="page-body">
-										<div class="row">
-											<div class="col-md-12 col-xl-12">
-												<div class="card sale-card">
-													<div class="card-header">
-														<h5>Administración</h5>
-													</div>
-													<div class="card-block">														
-													</div>
-												</div>
-											</div>
-										</div>
+									<div class="page-body">																																													
+										{% block contenido %}									
+										{% endblock %}							
 									</div>
 								</div>
 							</div>
@@ -397,32 +361,25 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="{% static 'Administracion/js/analytics.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery-ui.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/popper.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/bootstrap.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/waves.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery.slimscroll.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery.flot.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery.flot.categories.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/curvedLines.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/jquery.flot.tooltip.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/chartist.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/amcharts.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/serial.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/light.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/pcoded.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/vertical-layout.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/custom-dashboard.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/script.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Administracion/js/js.js' %}" ></script>
-<script type="text/javascript">
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-23581568-13');
-</script>
-<div class="flotTip" style="display: none; position: absolute; background: rgb(255, 255, 255); z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap;"></div>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="5f2ca621139ecb5392fe88a7-|49" defer=""></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery-ui.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/popper.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'Administracion/js/waves.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery.slimscroll.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/modernizr.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/css-scrollbars.js' %}"></script>
+	<script src="{% static 'Administracion/js/pcoded.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script src="{% static 'Administracion/js/vertical-layout.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script src="{% static 'Administracion/js/jquery.mCustomScrollbar.concat.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/script.min.js' %}"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="11a888cb5720a405eee272d9-text/javascript"></script>	
+	<script type="11a888cb5720a405eee272d9-text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+	</script>
+	<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="11a888cb5720a405eee272d9-|49" defer="">	
+	</script>
 </body></html>

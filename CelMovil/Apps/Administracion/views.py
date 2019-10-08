@@ -1,11 +1,22 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView, ListView
 from .forms import AccesoriosForm
-from django.views.generic import CreateView
+from .models import Accesorios
+from django.urls import reverse_lazy
 # Create your views here.
-class AdminView(TemplateView):
-	template_name='Administracion/index.html'
+class HomeView(TemplateView):
+	template_name='Administracion/home.html'
+
+class ListarClienteView(ListView):
+	template_name = 'Administracion/listaraccesorios.html'
+	model = Accesorios
+	
+	def get_queryset(self):
+		return Accesorios.objects.all()
 
 class CrearAccesorio(CreateView):
-	template_name = 'crear_accesorio.html'
+	template_name='Administracion/crearaccesorios.html'
 	form_class = AccesoriosForm
-	succes_url = 'admin'
+	success_url = reverse_lazy('Administracion:Home')
+
+
+

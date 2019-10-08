@@ -4,13 +4,11 @@ from django.db import models
 
 class Accesorios(models.Model):
     codigo = models.CharField(max_length=50)
-    nombre = models.CharField(max_length=200)
-    marca = models.DateTimeField(max_length=True)
-    fecha_ingreso = models.DateTimeField(auto_now_add=True)
+    nombre = models.CharField(max_length=200)    
     cantidad = models.FloatField()
 
     def __str__(self):
-        return '%s %s' % (self.id_accesorios,self.nombre)
+        return self.nombre
 
 class Celulares(models.Model):
     codigo = models.FloatField()
