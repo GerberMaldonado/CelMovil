@@ -4,72 +4,76 @@ from django.db import models
 
 class Accesorios(models.Model):
     codigo = models.CharField(max_length=50)
-    nombre = models.CharField(max_length=200)    
+    nombre = models.CharField(max_length=50)
+    marca = models.CharField(max_length=50)
     cantidad = models.FloatField()
+    fechaingreso = models.DateTimeField()
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.nombre
 
+class Empleados(models.Model):
+    dpi = models.CharField(max_length=30)
+    telefono = models.IntegerField()
+    rol = models.CharField(max_length=50)
+
 class Celulares(models.Model):
-    codigo = models.FloatField()
+    codigo = models.CharField(max_length=50)
     marca = models.CharField(max_length=25)
-    fecha_ingreso = models.DateTimeField(auto_now_add=True)
-    serie_imei = models.DateTimeField(auto_now_add=True)
-    precio_mayor = models.FloatField()
-    precio_unidad = models.FloatField()
+    serieimei = models.CharField(max_length=50)
+    preciomayor = models.FloatField()
+    preciounidad = models.FloatField()
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)    
 
 class Chips(models.Model):
-	codigo = models.FloatField()
-	operador = models.CharField(max_length=15)
-	serie = models.CharField(max_length=8)
-	fecha_ingreso = models.DateTimeField(auto_now_add=True)
+    codigo = models.CharField(max_length=50)
+    operador = models.CharField(max_length=15)
+    serie = models.CharField(max_length=8)
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)     
 
-class Cliente(models.Model):
+class Clientes(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    DPI = models.CharField(max_length=30)
+    telefono = models.IntegerField()
+    dpi = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
+    direccion = models.CharField(max_length=100)
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)        
 
-class Detalle_Venta(models.Model):
-    accesorios = models.ForeignKey(Accesorios, on_delete=models.CASCADE)
-
-class Reparaciones(models.Model):
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    descripcion_falla = models.CharField(max_length=200)
-    fecha_ingreso = models.DateTimeField(auto_now_add=True)
-    fecha_salida = models.DateTimeField(auto_now_add=True)
-    costo = models.FloatField() 
-
-class Repuestos(models.Model):
-    reparaciones = models.ForeignKey(Reparaciones, on_delete=models.CASCADE)
-    codigo = models.FloatField()
+class Reparaciones(models.Model):    
+    descripcionfalla = models.CharField(max_length=200)    
+    fechasalida = models.DateTimeField(null=True, blank=True)
+    costo = models.FloatField()
+    clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)    
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)     
+    
+class Repuestos(models.Model):    
+    codigo = models.CharField(max_length=50)
     nombre = models.CharField(max_length=50)
     marca = models.CharField(max_length=25)
     modelo = models.CharField(max_length=25)
     cantidad = models.FloatField()
-    precio_mayor = models.FloatField()
-    precio_unidad = models.FloatField()
-    reparaciones_idReparaciones = models.CharField(max_length=10)
-
-class Empleados(models.Model):
-	nombre = models.CharField(max_length=50)
-	apellido = models.CharField(max_length=50)
-	email = models.CharField(max_length=50)
-	DPI = models.CharField(max_length=30)
-	telefono = models.FloatField()
-	rol = models.CharField(max_length=50)
-
-class Usuario(models.Model):
-    empleados = models.ForeignKey(Empleados, on_delete=models.CASCADE)
-    usuario = models.CharField(max_length=50)
-    contraseña = models.CharField(max_length=50)
-
+    preciomayor = models.FloatField()
+    preciounidad = models.FloatField() 
+    reparaciones = models.ForeignKey(Reparaciones, on_delete=models.DO_NOTHING)    
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)    
 
 class Ventas(models.Model):
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    fecha = models.DateTimeField(auto_now_add=True)
-    cantidad_venta = models.FloatField()
-    vendedor_id_vendedor = models.CharField(max_length=7)
-    cliente_id_cliente = models.CharField(max_length=7)
-    empleados_id_empleados = models.CharField(max_length=7)
+    clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)
+    empleados = models.ForeignKey(Empleados, on_delete=models.DO_NOTHING)           
     
+class DetalleVentas(models.Model):
+    accesorios = models.ForeignKey(Accesorios, on_delete=models.DO_NOTHING, null=True, blank=True)
+    celulares = models.ForeignKey(Celulares, on_delete=models.DO_NOTHING, null=True, blank=True)
+    chips = models.ForeignKey(Chips, on_delete=models.DO_NOTHING, null=True, blank=True)
+    reparaciones = models.ForeignKey(Reparaciones, on_delete=models.DO_NOTHING, null=True, blank=True)
+    ventas = models.ForeignKey(Ventas, on_delete=models.DO_NOTHING, null=True, blank=True)    
+    creacion = models.DateTimeField(auto_now_add=True)
+    modificar = models.DateTimeField(auto_now=True)  

@@ -21,7 +21,5 @@ urlpatterns = [
 
     path('Administracion/', include('Apps.Administracion.urls', namespace = 'administracion')),
 
-#   path('Administracion/', include('Apps.Administracion.urls')),
-
     path('admin/', admin.site.urls),    
 ]
