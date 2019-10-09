@@ -1,24 +1,24 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Accesorios</h5>
-<span>Aquí puede visualizar en un listado todos los accesorios.</span>	
+<h5>Listado de Clientes</h5>
+<span>Aquí puede visualizar en un listado todos los clientes.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Accesorios</a> 																						
+        <a href="">Clientes</a> 																						
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Accesorios</a> 																						
+        <a href="">Listado de Clientes</a> 																						
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de los Accesorios</h5>
+        <h5>Listado de los Clientes</h5>
         <a href="{% url 'Administracion:CrearAccesorio' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Accesorio</button>
+            <button type="submit" class="btn btn-danger float-right">Nuevo Cliente</button>
         </a>                    
     </div>
     <div class="card-block">
@@ -27,49 +27,49 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Codigo</th>
                         <th>Nombre</th>
-                        <th>Marca</th>
-                        <th>Cantidad</th>
-                        <th>Fecha Ingreso</th>
+                        <th>Apellido</th>
+                        <th>Telefono</th>
+                        <th>DPI</th>
+                        <th>Email</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for est in object_list %}
+                    {% for cli in object_list %}
                     <tr>                        
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.id }}</span>                            
+                            <span class="tabledit-span">{{ cli.id }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.codigo }}</span>                            
+                            <span class="tabledit-span">{{ cli.nombre }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.nombre }}</span>                            
+                            <span class="tabledit-span">{{ cli.apellido }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.marca }}</span>                            
+                            <span class="tabledit-span">{{ cli.telefono }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.cantidad }}</span>                            
+                            <span class="tabledit-span">{{ cli.dpi }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.fechaingreso }}</span>                            
+                            <span class="tabledit-span">{{ cli.email }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.creacion }}</span>                            
+                            <span class="tabledit-span">{{ cli.creacion }}</span>                            
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarAccesorio' est.id %}">
+                                    <a href="">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-pencil">                                                   
                                             </span>                                                                                                                           
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarAccesorio' est.id %}">
+                                    <a href="">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-trash-o">                                                   
                                             </span>                                                                                                                           
