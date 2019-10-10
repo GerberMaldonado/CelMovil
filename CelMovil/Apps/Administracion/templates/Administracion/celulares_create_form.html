@@ -1,13 +1,13 @@
 {% extends 'Administracion/index.html' %}
 
 {% block header %}
-<h5>Clientes</h5>
-<span>En este bloque puede agregar, ver, eliminar y actualizar clientes.</span>
+<h5>Celulares</h5>
+<span>En este bloque puede agregar, ver, eliminar y actualizar el registro de celulares.</span>
 {% endblock %}
 
 {% block home %}
 	<li class="breadcrumb-item">
-        <a href="{% url 'Administracion:ListarCliente' %}">Clientes</a> 																						
+        <a href="">Celulares</a> 																						
     </li>
 	<li class="breadcrumb-item">
         <a href="">Registrar</a> 																						
@@ -19,7 +19,7 @@
 	<div class="col-md-12 col-xl-12">	
 		<div class="card">
 			<div class="card-header">			
-				<h5>Registro de los Clientes</h5>		
+				<h5>Registro de los Celulares</h5>		
 			</div>
 			<div class="card-block">
 				<form id="main" method="post">
@@ -27,49 +27,49 @@
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Codigo</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" name="codigo" id="codigo" placeholder="Ingrese el codigo del cliente">
+							<input type="text" class="form-control" name="codigo" id="codigo" placeholder="Ingrese el codigo del celular">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Nombre</label>
+						<label class="col-sm-2 col-form-label">Marca</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre del cliente">
+							<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese la marca del celular">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Apellido</label>
+						<label class="col-sm-2 col-form-label">Serieimei</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese el appellido del cliente">
+							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese el serieimei del celular">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Telefono</label>
+						<label class="col-sm-2 col-form-label">Preciomayor</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese el telefono del cliente">
+							<input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese el precio por mayor">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">DPI</label>
+						<label class="col-sm-2 col-form-label">Preciounidad</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese el dpi del cliente">
+							<input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese el precio por unidad">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Email</label>
+						<label class="col-sm-2 col-form-label">Fecha Creación</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese el email del cliente">
+							<input type="date" class="form-control" id="fechaingreso" name="fechaingreso" placeholder="Ingrese fecha">
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Fecha Ingreso</label>
+						<label class="col-sm-2 col-form-label">Fecha Modificación</label>
 						<div class="col-sm-10">
-							<input type="date" class="form-control" id="fechaingreso" name="fechaingreso" placeholder="Ingrese la fecha">
+							<input type="date" class="form-control" id="fechaingreso" name="fechaingreso" placeholder="Ingrese fecha">
 							<span class="messages"></span>
 						</div>
 					</div>

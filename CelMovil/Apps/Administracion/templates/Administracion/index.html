@@ -124,9 +124,7 @@
 								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">									
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="fa fa-user"></i>
-											</span>
+											<span class="pcoded-micon"><i class="fa fa-user"></i></span>
 											<span class="pcoded-mtext">Clientes</span>
 										</a>
 										<ul class="pcoded-submenu">
@@ -136,7 +134,7 @@
 												</a>
 											</li>
 											<li class="">
-												<a href="#" class="waves-effect waves-dark">
+												<a href="{% url 'Administracion:CrearCliente' %}" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Registrar Cliente</span>
 												</a>
 											</li>						
@@ -148,9 +146,14 @@
 											<span class="pcoded-mtext">Celulares</span>
 										</a>
 										<ul class="pcoded-submenu">
+											<li class="active">
+												<a href="{% url 'Administracion:ListarCelulares' %}" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Lista de Celulares</span>
+												</a>
+											</li>
 											<li class="">
-												<a href="#" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Bottom Menu</span>
+												<a href="{% url 'Administracion:CrearCelulares' %}" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Registrar Celular</span>
 												</a>
 											</li>
 										</ul>
@@ -158,9 +161,7 @@
 									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
 										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 											<a href="javascript:void(0)" class="waves-effect waves-dark">
-												<span class="pcoded-micon">
-													<i class="icon-sim_card"></i>
-												</span>
+												<span class="pcoded-micon"><i class="icon-sim_card"></i></span>
 												<span class="pcoded-mtext">Chips</span>
 											</a>
 											<ul class="pcoded-submenu">
@@ -180,9 +181,7 @@
 									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
 										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 											<a href="javascript:void(0)" class="waves-effect waves-dark">
-												<span class="pcoded-micon">
-													<i class="fa fa-plug"></i>
-												</span>
+												<span class="pcoded-micon"><i class="fa fa-plug"></i></span>
 												<span class="pcoded-mtext">Accesorios</span>
 											</a>
 											<ul class="pcoded-submenu">
@@ -201,9 +200,7 @@
 									</ul>
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="fa fa-wrench"></i>
-											</span>
+											<span class="pcoded-micon"><i class="fa fa-wrench"></i></span>
 											<span class="pcoded-mtext">Reparaciones</span>											
 										</a>
 										<ul class="pcoded-submenu">
@@ -226,9 +223,7 @@
 									</li>	
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="fa fa-truck"></i>
-											</span>
+											<span class="pcoded-micon"><i class="fa fa-truck"></i></span>
 											<span class="pcoded-mtext">Repuestos</span>											
 										</a>
 										<ul class="pcoded-submenu">
@@ -251,9 +246,7 @@
 									</li>						
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
-											<span class="pcoded-micon">
-												<i class="icon-dollar"></i>
-											</span>
+											<span class="pcoded-micon"><i class="icon-dollar"></i></span>
 											<span class="pcoded-mtext">Ventas</span>										
 										</a>
 										<ul class="pcoded-submenu">

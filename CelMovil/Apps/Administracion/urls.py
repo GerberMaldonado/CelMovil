@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares
 
 app_name = 'Administracion'
 
@@ -28,10 +28,17 @@ urlpatterns = [
     path('EliminarAccesorio/<int:pk>/', EliminarAccesorio.as_view(), name='EliminarAccesorio'),
     # Fin de urls de Accesorios
 
-    # Urls de Accesorios
+    # Urls de Clientes
     path('ListarCliente/', ListarCliente.as_view(), name='ListarCliente'),
-    #path('CrearAccesorio/', CrearAccesorio.as_view(), name='CrearAccesorio'),
-    #path('ActualizarAccesorio/<int:pk>/', ActualizarAccesorio.as_view(), name='ActualizarAccesorio'),
-    #path('EliminarAccesorio/<int:pk>/', EliminarAccesorio.as_view(), name='EliminarAccesorio'),
-    # Fin de urls de Accesorios
+    path('CrearCliente/', CrearCliente.as_view(), name='CrearCliente'),
+    path('ActualizarCliente/<int:pk>/', ActualizarCliente.as_view(), name='ActualizarCliente'),
+    path('EliminarCliente/<int:pk>/', EliminarCliente.as_view(), name='EliminarCliente'),
+    # Fin de urls de Clientes
+
+    # Urls de Celulares
+    path('ListarCelulares/', ListarCelulares.as_view(), name='ListarCelulares'),
+    path('CrearCelulares/', CrearCelulares.as_view(), name='CrearCelulares'),
+    path('ActualizarCelulares/<int:pk>/', ActualizarCelulares.as_view(), name='ActualizarCelulares'),
+    path('EliminarCelulares/<int:pk>/', EliminarCelulares.as_view(), name='EliminarCelulares'),
+    # Fin de urls de Celulares
 ]
