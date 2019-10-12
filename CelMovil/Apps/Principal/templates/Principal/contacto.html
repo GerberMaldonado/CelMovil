@@ -1,8 +1,225 @@
 {% load static%}
 {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="{% static 'Principal/css/estilos.css' %}" rel="stylesheet">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <img src="">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Cel Movil</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <img id="imgcontacto" src="{% static 'Principal/images/contacto.jpg' %}">
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Ubicanos</h4>
+        <div>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1924.4666365027258!2d-91.74956875914584!3d15.271434321691885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858c3164bb8ddb17%3A0x5602dc803aa928f7!2sParque%20Central%20San%20Miguel%20Ixtahuac%C3%A1n!5e0!3m2!1ses-419!2sgt!4v1568998234972!5m2!1ses-419!2sgt" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <img id="llamada" src="{% static 'Principal/images/llamada.png' %}">
+            <h4>Llamanos</h4>
+            <p>44741402</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <img id="whatsapp" src="{% static 'Principal/images/whatsapp.jpeg' %}">
+            <h4>Whatsapp</h4>
+            <p>44741402</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <img id="facebook" src="{% static 'Principal/images/facebook.png' %}">
+            <h4>Facebook</h4>
+            <p>CelMovilSanMiguel</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <img id="email" src="{% static 'Principal/images/email.png' %}">
+            <h4>E-mail</h4>
+            <p>celmovil1979@gmail.com</p> 
+          </div>
+        </div>
+      </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="{% static 'Principal/css/estilos.css' %}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <H3>Contactenos</H3>
+        <!--
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+  -->
+
+  <!--
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <img id="imgcontacto" src="{% static 'Principal/images/contacto.jpg' %}">
+    </div>
+    
+    <div id="ubicanos" class="col-sm-8 text-left"> 
+      <h1>Ubicanos</h1>
+     
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1924.4666365027258!2d-91.74956875914584!3d15.271434321691885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858c3164bb8ddb17%3A0x5602dc803aa928f7!2sParque%20Central%20San%20Miguel%20Ixtahuac%C3%A1n!5e0!3m2!1ses-419!2sgt!4v1568998234972!5m2!1ses-419!2sgt" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" id ="div2"></iframe>
+    
+    </div>
+<!--
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+-->
+
+<!--
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
+
+
+
+<!--
 <html>
 <head>
-	<title>Acerca de</title>
+    <title>Acerca de</title>
 </head>
 <body>
      <div class="w3-container w3-teal">
@@ -29,3 +246,4 @@
 </div> 
 
 </html>
+-->

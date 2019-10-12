@@ -1,40 +1,189 @@
+{% load static i18n %}
 
-{% load staticfiles i18n %}
-{% block contenido %}
-
-	<title>PRODUCTOS</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Productos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+<body>
 
-	<h1>Productos</h1>
-	    <table class="table">
+<div class="jumbotron text-center">
+  <h1>Cel Movil</h1>
+  <p>Estas son nuestros productos</p> 
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Celulares</h3>
+        <img src="{% static 'Principal/images/cel2.jpeg' %}" alt="imagen">
+        <p>Contamos con repuestos originales y genericos para tu celular, nuestro precios son los mejores, </p>
+    </div>
+    
+    <div class="col-sm-4">
+      <h3>Accesorios</h3>
+      <img src="{% static 'Principal/images/acces1.jpg' %}" alt="imagen">
+      <p>Tenemos un gran surtido de accesorios para tu celular o tablet</p>
+      
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Repuestos</h3>
+      <img src="{% static 'Principal/images/rep1.jpg' %}" alt="imagen">        
+      <p>Contamos con repuestos para todas las marcas de celulares</p>
+      
+    </div>
+</div>
+</div>
+
+<div class="container"><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Reparacion</h3>
+            <img src="{% static 'Principal/images/rep3.jpg' %}" alt="imagen">
+            <p>Te ofrecemos el servicio de reparacion para tu celular</p>
+    </div>
+    
+    <div class="col-sm-4">
+      <h3>Liberacion</h3>
+      <img src="{% static 'Principal/images/liberacion1.jpeg' %}" alt="imagen">
+      <p>Te ofrecemos liberación para todas las marcas de celular</p>
+      
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Flasheo</h3>
+      <img src="{% static 'Principal/images/flasheo2.jpeg' %}" alt="imagen">        
+      <p>Te ofrecemos el servicio de flasheo para tu celular</p>
+      
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+<!--
+<head>
+
+    <title>PRODUCTOS</title>
+<link href="{% static 'Principal/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'Principal/css/estilos.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="row main-container middle-xs center-xs">
+        <div class="col-md-8 col-sm-10 col-xs-11 col-lg-7">
+            <div class="box">
+
+<header class="main-header">
+
+<nav class="nav-link">
+    <h2>Bienvenidos a nuestra pagina celmovil San Miguel Ixtahuacan</h2>
+    <!--
+<a href=""class="nav-link">Inicio</a>
+<a href=""class="nav-link">Menu</a>
+<a href=""class="nav-link">Titulo</a>
+--
+</nav>
+
+</header>
+<div class="menu" >
+
+    <header class="text-center">
+    <img src="{% static 'Principal/images/home.jpeg' %}">
+    <h1 class="red-text pacifico tiltle ">Productos</h1>
+</header>
+
+<div class="productos">
+<div class="row center-xs">
+    <div class="col-xs-10 col-sm-6 col-md-4 product">
+        <div class="card">
+            <img src="{% static 'Principal/images/cel2.jpeg' %}" alt="imagen cel nokia">
+            <h3>Celulares</h3>
+            <p>Ponemos a su disposicion una amplia gama de celulares, contamos con las marcas mas reconocidas en el 
+                el mercado, y los precios mas favorables.
+            </p>
+        </div>
+
+    </div>
+    <div class="col-xs-10 col-sm-6 col-md-4 product">
+        <div class="card">
+            <img src="{% static 'Principal/images/rep1.jpg' %}" alt="imagen cel nokia">
+            <h3>Repuestos</h3>
+            <p>Contamos con repuestos originales y genericos para tu celular, nuestro precios son los mejores, </p>
+        </div>
+
+    </div>
+    <div class="col-xs-10 col-sm-6 col-md-4 product">
+        <div class="card">
+            <img src="{% static 'Principal/images/acces1.jpg' %}" alt="imagen cel nokia">
+            <h3>Accesorios</h3>
+            <p>Tenemos gran cantidad de accesorios para tu celular o tablet </p>
+        </div>
+
+    </div>
+    <div class="col-xs-10 col-sm-6 col-md-4 product">
+        <div class="card">
+            <img src="{% static 'Principal/images/rep2.jpg' %}" alt="imagen cel nokia">
+            <h3>Reparaciones</h3>
+            <p>Ofrecemos servicio técnico garantizado para cualquier problema con tu celular ponemos a su disposicion reparacion, desbloqueo, liberación, flasheo de cualquier marca de celular</p>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</body>
+
+
+<!--
+
+    <h1>Productos</h1>
+        <table class="table">
     <thead>
     
     </thead>
     <tr>
-    	<td>
-    	<td>Celulares</td>
-    	<td><img src="{% static 'Principal/images/celulares.jpeg' %}"/></td>
-    	</td>
-    	<td>
-    	<td>Accesorios</td>
-    	<td><img src="{% static 'Principal/images/accesorios.jpeg' %}"/></td>
-    	</td>
+        <td>
+        <td>Celulares</td>
+        <td><img src="{% static 'Principal/images/celulares.jpeg' %}"/></td>
+        </td>
+        <td>
+        <td>Accesorios</td>
+        <td><img src="{% static 'Principal/images/accesorios.jpeg' %}"/></td>
+        </td>
     </tr>
     <tr>
-    	<td>
-    	<td>Repuestos</td>
-    	<td><img src="{% static 'Principal/images/repuestos.jpeg' %}"/></td>
-    	</td>
-   		<td>
-    	<td>Reparaciones</td>
-    	<td><img src="{% static 'Principal/images/reparaciones.jpeg' %}"/></td>
-    	</td>
+        <td>
+        <td>Repuestos</td>
+        <td><img src="{% static 'Principal/images/repuestos.jpeg' %}"/></td>
+        </td>
+        <td>
+        <td>Reparaciones</td>
+        <td><img src="{% static 'Principal/images/reparaciones.jpeg' %}"/></td>
+        </td>
     </tr>
     </table>
+-->
+
     <!--
 <div>
 <img class="img-radius" src="{% static 'Principal/images/1.png' %}" alt="Generic placeholder image">
 </div>
 -->
-
-{% endblock %}

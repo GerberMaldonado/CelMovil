@@ -1,38 +1,244 @@
 {% load staticfiles i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OFERTAS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Cel Movil</h1>      
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <h3>Estas son nuestras ofertas</h3>
+        <!--
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+  -->
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">SKY DUAL SIM</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/skyf2.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">NOKIA 1</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/nokia1.webp' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">HUAWEI Y9</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/huaweiy9.webp' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">MICRO SD</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/microsd.png' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">POWER BANK</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/powerbank.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BATERIA ORIGINAL</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/bateria.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BOCINA</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/bocina.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">RSIM 13</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/rsim13.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">CARGADOR CARGA RAPIDA</div>
+        <div class="panel-body"><img src="{% static 'Principal/images/cargador.jpeg' %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+</body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Cel Movil</h1>
+  <p>Estas son nuestras ofertas</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <div class="card">
+            <img src="{% static 'Principal/images/rep1.jpg' %}" alt="imagen cel nokia">
+            <h3>Repuestos</h3>
+            <p>Contamos con repuestos originales y genericos para tu celular, nuestro precios son los mejores, </p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+{% load staticfiles i18n %}
 <title>PRODUCTOS</title>
 </head>
 
-	<h1>Productos</h1>
-	    <table class="table">
+    <h1>Productos</h1>
+        <table class="table">
     <thead>
     
     </thead>
     <tr>
-    	<td>
-    	<td>Antes Q. <br>
+        <td>
+        <td>Antes Q. <br>
             Ahora Q.
         </td>
-    	<td><img src="{% static 'Principal/images/skyf2.jpeg' %}"/></td>
-    	</td>
-    	<td>
-    	<td>Antes Q. <br>
+        <td><img src="{% static 'Principal/images/skyf2.jpeg' %}"/></td>
+        </td>
+        <td>
+        <td>Antes Q. <br>
             Ahora Q.
         </td>
-    	<td><img src="{% static 'Principal/images/kgtelkt110.jpg' %}"/></td>
-    	</td>
+        <td><img src="{% static 'Principal/images/kgtelkt110.jpg' %}"/></td>
+        </td>
     </tr>
     <tr>
-    	<td>
-    	<td>Antes Q. <br>
+        <td>
+        <td>Antes Q. <br>
             Ahora Q.
         </td>
-    	<td><img src="{% static 'Principal/images/nokia1.webp' %}"/></td>
-    	</td>
-   		<td>
-    	<td>Antes Q. <br>
+        <td><img src="{% static 'Principal/images/nokia1.webp' %}"/></td>
+        </td>
+        <td>
+        <td>Antes Q. <br>
             Ahora Q.
         </td>
-    	<td><img src="{% static 'Principal/images/huaweiy9.webp' %}"/></td>
-    	</td>
+        <td><img src="{% static 'Principal/images/huaweiy9.webp' %}"/></td>
+        </td>
     </tr>
     </table>
+    -->
