@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Apps.Principal',
     'Apps.Administracion',
-    'Apps.Login',
+    'Apps.Registration',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = 'Administracion:Home'
+LOGOUT_REDIRECT_URL = 'Principal:index'
