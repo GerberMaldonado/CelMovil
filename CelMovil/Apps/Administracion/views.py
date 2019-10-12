@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, CreateView, ListView, UpdateView, DeleteView
-from .forms import AccesoriosForm, ClientesForm, CelularesForm
-from .models import Accesorios, Clientes, Celulares
+from .forms import AccesoriosForm, ClientesForm, CelularesForm, ChipsForm
+from .models import Accesorios, Clientes, Celulares, Chips
 from django.urls import reverse_lazy
 # Create your views here.
 class HomeView(TemplateView):
@@ -83,3 +83,29 @@ class EliminarCelulares(DeleteView):
     form_class = CelularesForm    
     success_url = reverse_lazy('Administracion:ListarCelulares')
 #Fin de Vistas de CRUD Celulares
+
+# Vistas para el CRUD de Chips
+class ListarChips(ListView):
+	template_name = 'Administracion/chips_list_form.html'
+	model = Chips
+	
+	def get_queryset(self):
+		return Chips.objects.all()
+
+class CrearChips(CreateView):
+	template_name='Administracion/chips_create_form.html'
+	form_class = ChipsForm
+	success_url = reverse_lazy('Administracion:ListarChips')
+
+class ActualizarChips(UpdateView):
+    model = Chips
+    form_class = ChipsForm
+    template_name_suffix = '_update_form'
+    success_url = reverse_lazy('Administracion:ListarChips')
+
+class EliminarChips(DeleteView):
+    template_name='Administracion/chips_confirm_delete_form.html'	
+    model = Chips
+    form_class = ChipsForm    
+    success_url = reverse_lazy('Administracion:ListarChips')
+#Fin de Vistas de CRUD Chips

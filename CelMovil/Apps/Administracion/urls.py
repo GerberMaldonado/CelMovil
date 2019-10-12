@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares 
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips 
 
 app_name = 'Administracion'
 
@@ -41,4 +41,11 @@ urlpatterns = [
     path('ActualizarCelulares/<int:pk>/', ActualizarCelulares.as_view(), name='ActualizarCelulares'),
     path('EliminarCelulares/<int:pk>/', EliminarCelulares.as_view(), name='EliminarCelulares'),
     # Fin de urls de Celulares
+
+    # Urls de Chips
+    path('ListarChips/', ListarChips.as_view(), name='ListarChips'),
+    path('CrearChips/', CrearChips.as_view(), name='CrearChips'),
+    path('ActualizarChips/<int:pk>/', ActualizarChips.as_view(), name='ActualizarChips'),
+    path('EliminarChips/<int:pk>/', EliminarChips.as_view(), name='EliminarChips'),
+    # Fin de urls de Chips
 ]
