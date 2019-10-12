@@ -27,12 +27,12 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Codigo</th>
                         <th>Marca</th>
                         <th>Serie imei</th>
                         <th>Precio mayor</th>
                         <th>Precio unidad</th>
                         <th>Fecha Creación</th>
-                        <th>Modificar</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
@@ -41,6 +41,9 @@
                     <tr>                        
                         <td class="tabledit-view-mode">
                             <span class="tabledit-span">{{ cel.id }}</span>                            
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ cel.codigo }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
                             <span class="tabledit-span">{{ cel.marca }}</span>                            
@@ -56,9 +59,6 @@
                         </td>
                         <td class="tabledit-view-mode">
                             <span class="tabledit-span">{{ cel.creacion }}</span>                            
-                        </td>
-                        <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.modificar }}</span>                            
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">

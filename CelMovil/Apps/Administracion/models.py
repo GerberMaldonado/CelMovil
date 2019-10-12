@@ -28,6 +28,9 @@ class Celulares(models.Model):
     creacion = models.DateTimeField(auto_now_add=True)
     modificar = models.DateTimeField(auto_now=True)    
 
+    def __str__(self):
+        return self.marca
+
 class Chips(models.Model):
     codigo = models.CharField(max_length=50)
     operador = models.CharField(max_length=15)
@@ -43,7 +46,10 @@ class Clientes(models.Model):
     email = models.CharField(max_length=50)
     direccion = models.CharField(max_length=100)
     creacion = models.DateTimeField(auto_now_add=True)
-    modificar = models.DateTimeField(auto_now=True)        
+    modificar = models.DateTimeField(auto_now=True)     
+
+    def __str__(self):
+        return self.nombre   
 
 class Reparaciones(models.Model):    
     descripcionfalla = models.CharField(max_length=200)    
@@ -63,7 +69,10 @@ class Repuestos(models.Model):
     preciounidad = models.FloatField() 
     reparaciones = models.ForeignKey(Reparaciones, on_delete=models.DO_NOTHING)    
     creacion = models.DateTimeField(auto_now_add=True)
-    modificar = models.DateTimeField(auto_now=True)    
+    modificar = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.nombre    
 
 class Ventas(models.Model):
     clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)

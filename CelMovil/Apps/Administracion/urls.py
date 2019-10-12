@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares 
 
 app_name = 'Administracion'
 
@@ -27,7 +27,7 @@ urlpatterns = [
     path('ActualizarAccesorio/<int:pk>/', ActualizarAccesorio.as_view(), name='ActualizarAccesorio'),
     path('EliminarAccesorio/<int:pk>/', EliminarAccesorio.as_view(), name='EliminarAccesorio'),
     # Fin de urls de Accesorios
-
+    
     # Urls de Clientes
     path('ListarCliente/', ListarCliente.as_view(), name='ListarCliente'),
     path('CrearCliente/', CrearCliente.as_view(), name='CrearCliente'),
