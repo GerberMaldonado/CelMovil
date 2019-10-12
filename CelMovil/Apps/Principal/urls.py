@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from .views import IndexView
 
-app_name = 'app1'
+app_name = 'Principal'
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
 ]
