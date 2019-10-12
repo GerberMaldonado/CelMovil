@@ -1,0 +1,39 @@
+{% extends 'Administracion/index.html' %}
+
+{% block header %}
+<h5>Actualizar Chips</h5>
+<span>Ingrese los datos que desea actualizar</span>
+{% endblock %}
+
+{% block home %}
+	<li class="breadcrumb-item">
+        <a href="">Chips</a> 																						
+    </li>
+	<li class="breadcrumb-item">
+        <a href="">Actualizar</a> 																						
+    </li>	    
+{% endblock %}
+
+{% block contenido %}
+<div class="row">
+	<div class="col-md-12 col-xl-12">	
+		<div class="card">
+			<div class="card-header">			
+				<h5>Actualizar Chips</h5>		
+			</div>
+			<div class="card-block">
+				<form id="main" method="post">
+					{% csrf_token %}	
+					{{ form.as_p }}			
+					<div class="form-group row">
+						<label class="col-sm-2"></label>
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary m-b-0">Actualizar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

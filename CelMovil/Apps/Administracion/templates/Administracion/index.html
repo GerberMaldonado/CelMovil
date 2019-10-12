@@ -121,8 +121,8 @@
 						<div class="nav-list">
 							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div class="pcoded-inner-navbar main-menu" style="overflow: hidden; width: 100%; height: 100%;">
 								<div class="pcoded-navigation-label" menu-title-theme="theme1">Navegación</div>
-								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">									
-									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">				
+								 <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="fa fa-user"></i></span>
 											<span class="pcoded-mtext">Clientes</span>
@@ -140,6 +140,8 @@
 											</li>						
 										</ul>
 									</li>
+
+								   <ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="fa fa-mobile"></i></span>
@@ -158,6 +160,7 @@
 											</li>
 										</ul>
 									</li>
+									</ul>
 									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
 										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 											<a href="javascript:void(0)" class="waves-effect waves-dark">
@@ -166,13 +169,13 @@
 											</a>
 											<ul class="pcoded-submenu">
 												<li class="">
-													<a href="{% url 'Administracion:CrearAccesorio' %}" class="waves-effect waves-dark">
-														<span class="pcoded-mtext">Registrar Accesorio</span>
+													<a href="{% url 'Administracion:ListarChips' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Lista de Chips</span>
 													</a>
 												</li>		
 												<li class="">
-													<a href="{% url 'Administracion:CrearAccesorio' %}" class="waves-effect waves-dark">
-														<span class="pcoded-mtext">Listado de Accesorios</span>
+													<a href="{% url 'Administracion:CrearChips' %}" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Registrar Chips</span>
 													</a>
 												</li>										
 											</ul>
@@ -198,7 +201,8 @@
 											</ul>
 										</li>				
 									</ul>
-									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+									 <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="fa fa-wrench"></i></span>
 											<span class="pcoded-mtext">Reparaciones</span>											
@@ -220,7 +224,8 @@
 												</a>
 											</li>
 										</ul>
-									</li>	
+									</li>
+									</ul>	
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
 										<a href="javascript:void(0)" class="waves-effect waves-dark">
 											<span class="pcoded-micon"><i class="fa fa-truck"></i></span>

@@ -1,24 +1,24 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Celulares</h5>
-<span>Aquí puede visualizar en un listado todos los celulares.</span>	
+<h5>Listado de Chips</h5>
+<span>Aquí puede visualizar en un listado todos los chips.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Celulares</a> 																						
+        <a href="">Chips</a> 																						
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Celulares</a> 																						
+        <a href="">Listado de Chips</a> 																						
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de los Celulares</h5>
-        <a href="{% url 'Administracion:CrearCelulares' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Celular</button>
+        <h5>Listado de los Chips</h5>
+        <a href="{% url 'Administracion:CrearChips' %}">                             
+            <button type="submit" class="btn btn-danger float-right">Nuevo Chip</button>
         </a>                    
     </div>
     <div class="card-block">
@@ -28,48 +28,40 @@
                     <tr>
                         <th>#</th>
                         <th>Codigo</th>
-                        <th>Marca</th>
-                        <th>Serie imei</th>
-                        <th>Precio mayor</th>
-                        <th>Precio unidad</th>
+                        <th>Operador</th>
+                        <th>Serie</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for cel in object_list %}
+                    {% for chi in object_list %}
                     <tr>                        
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.id }}</span>                            
+                            <span class="tabledit-span">{{ chi.id }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.codigo }}</span>                            
+                            <span class="tabledit-span">{{ chi.codigo }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.marca }}</span>                            
+                            <span class="tabledit-span">{{ chi.operador }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.serieimei }}</span>                            
+                            <span class="tabledit-span">{{ chi.serie }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.preciomayor }}</span>                            
-                        </td>
-                        <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.preciounidad }}</span>                           
-                        </td>
-                        <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.creacion }}</span>                            
+                            <span class="tabledit-span">{{ chi.creacion }}</span>                            
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarCelulares' cel.id %}">
+                                    <a href="{% url 'Administracion:ActualizarChips' chi.id %}">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-pencil">                                                   
                                             </span>                                                                                                                           
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarCelulares' cel.id %}">
+                                    <a href="{% url 'Administracion:EliminarChips' chi.id %}">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-trash-o">                                                   
                                             </span>                                                                                                                           
