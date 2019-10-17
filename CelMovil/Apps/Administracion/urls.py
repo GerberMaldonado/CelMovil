@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips 
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones 
 
 app_name = 'Administracion'
 
@@ -48,4 +48,11 @@ urlpatterns = [
     path('ActualizarChips/<int:pk>/', ActualizarChips.as_view(), name='ActualizarChips'),
     path('EliminarChips/<int:pk>/', EliminarChips.as_view(), name='EliminarChips'),
     # Fin de urls de Chips
+
+    # Urls de Reparaciones
+    path('ListarReparaciones/', ListarReparaciones.as_view(), name='ListarReparaciones'),
+    path('CrearReparaciones/', CrearReparaciones.as_view(), name='CrearReparaciones'),
+    path('ActualizarReparaciones/<int:pk>/', ActualizarReparaciones.as_view(), name='ActualizarReparaciones'),
+    path('EliminarReparaciones/<int:pk>/', EliminarReparaciones.as_view(), name='EliminarReparaciones'),
+    # Fin de urls de Reparaciones
 ]

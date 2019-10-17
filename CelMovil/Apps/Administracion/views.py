@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, CreateView, ListView, UpdateView, DeleteView
-from .forms import AccesoriosForm, ClientesForm, CelularesForm, ChipsForm
-from .models import Accesorios, Clientes, Celulares, Chips
+from .forms import AccesoriosForm, ClientesForm, CelularesForm, ChipsForm, ReparacionesForm
+from .models import Accesorios, Clientes, Celulares, Chips, Reparaciones
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
 # Create your views here.
@@ -118,3 +118,29 @@ class EliminarChips(StaffRequiredMixin, DeleteView):
     form_class = ChipsForm    
     success_url = reverse_lazy('Administracion:ListarChips')
 #Fin de Vistas de CRUD Chips
+
+# Vistas para el CRUD de Reparaciones
+class ListarReparaciones(StaffRequiredMixin, ListView):
+    template_name = 'Administracion/reparaciones/reparaciones_list_form.html'
+    model = Reparaciones
+    
+    def get_queryset(self):
+        return Reparaciones.objects.all()
+
+class CrearReparaciones(StaffRequiredMixin, CreateView):
+    template_name='Administracion/reparaciones/reparaciones_create_form.html'
+    form_class = ReparacionesForm
+    success_url = reverse_lazy('Administracion:ListarReparaciones')
+
+class ActualizarReparaciones(StaffRequiredMixin, UpdateView):
+    model = Reparaciones
+    form_class = ReparacionesForm
+    template_name_suffix = '/reparaciones_update_form'
+    success_url = reverse_lazy('Administracion:ListarReparaciones')
+
+class EliminarReparaciones(StaffRequiredMixin, DeleteView):
+    template_name='Administracion/reparaciones/reparaciones_confirm_delete_form.html' 
+    model = Reparaciones
+    form_class = ReparacionesForm    
+    success_url = reverse_lazy('Administracion:ListarReparaciones')
+#Fin de Vistas de CRUD Reparaciones

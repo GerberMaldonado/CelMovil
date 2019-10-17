@@ -1,0 +1,33 @@
+{% extends 'Administracion/index.html' %}
+{% block header %}
+<h5>Eliminar Reparaciones</h5>
+<span>Eliminaras una reparación y no se podra recuperar</span>
+{% endblock %}
+
+{% block home %}
+	<li class="breadcrumb-item">
+        <a href="">Reparaciones</a> 																						
+    </li>
+	<li class="breadcrumb-item">
+        <a href="">Eliminar</a> 																						
+    </li>	    
+{% endblock %}
+
+{% block contenido %}
+<div class="row">
+	<div class="col-md-12 col-xl-12">	
+		<div class="card">
+			<div class="card-header">			
+				<h5>Eliminar Reparaciones</h5>		
+			</div>
+			<div class="card-block">
+            <form action="" method="post">{% csrf_token %}
+                <p>¿Estás seguro de que quieres borrar <b>"{{ object }}"</b>?</p>
+				<button class="btn btn-danger" type="submit">Sí, Eliminar</button>
+				<a class= "btn btn-default" href="{% url 'Administracion:ListarAccesorio'%}">Cancelar</a>		
+            </form>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

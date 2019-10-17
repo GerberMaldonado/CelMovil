@@ -55,9 +55,12 @@ class Reparaciones(models.Model):
     descripcionfalla = models.CharField(max_length=200)    
     fechasalida = models.DateTimeField(null=True, blank=True)
     costo = models.FloatField()
-    clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)    
+    clientes = models.ForeignKey(Clientes, on_delete=models.CASCADE)    
     creacion = models.DateTimeField(auto_now_add=True)
-    modificar = models.DateTimeField(auto_now=True)     
+    modificar = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.descripcionfalla      
     
 class Repuestos(models.Model):    
     codigo = models.CharField(max_length=50)
@@ -67,7 +70,7 @@ class Repuestos(models.Model):
     cantidad = models.FloatField()
     preciomayor = models.FloatField()
     preciounidad = models.FloatField() 
-    reparaciones = models.ForeignKey(Reparaciones, on_delete=models.DO_NOTHING)    
+    reparaciones = models.ForeignKey(Reparaciones, on_delete=models.CASCADE)    
     creacion = models.DateTimeField(auto_now_add=True)
     modificar = models.DateTimeField(auto_now=True)
 
