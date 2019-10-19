@@ -1,0 +1,95 @@
+{% extends 'Administracion/index.html' %}
+
+{% block header %}
+<h5>Repuestos</h5>
+<span>En este bloque puede agregar, ver, eliminar y actualizar los repuestos.</span>
+{% endblock %}
+
+{% block home %}
+	<li class="breadcrumb-item">
+        <a href="{% url 'Administracion:ListarRepuestos' %}">Repuestos</a>
+
+    </li>
+	<li class="breadcrumb-item">
+        <a href="">Registrar</a> 																		
+    </li>	    
+{% endblock %}
+
+{% block contenido %}
+<div class="row">
+	<div class="col-md-12 col-xl-12">	
+		<div class="card">
+			<div class="card-header">			
+				<h5>Registro de los Repuestos</h5>		
+			</div>
+			<div class="card-block">
+				<form id="main" method="post">
+					{% csrf_token %}
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Codigo</label>
+						<div class="col-sm-10">
+							{{ form.codigo }}
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Nombre</label>
+						<div class="col-sm-10">
+							{{ form.nombre }}
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Marca</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese la marca del repuesto">
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Modelo</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="modelo" name="modelo" placeholder="Ingrese el modelo del repuesto">
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Cantidad</label>
+						<div class="col-sm-10">
+							<input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad del repuesto">
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Preciomayor</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="preciomayor" name="preciomayor" placeholder="Ingrese el precio por mayor">
+							<span class="messages"></span>
+						</div>
+					</div><div class="form-group row">
+						<label class="col-sm-2 col-form-label">Preciomenor</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="preciomenor" name="preciomenor" placeholder="Ingrese el precio por menor">
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Reparaciones</label>
+						<div class="col-sm-10">
+							{{ form.reparaciones }}	
+							
+							<span class="messages"></span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2"></label>
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary m-b-0">Registrar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

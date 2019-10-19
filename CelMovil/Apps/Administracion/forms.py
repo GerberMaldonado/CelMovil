@@ -1,5 +1,5 @@
 from django import forms
-from .models import Accesorios, Clientes, Celulares, Chips, Reparaciones
+from .models import Accesorios, Clientes, Celulares, Chips, Reparaciones, Repuestos
 
 class AccesoriosForm(forms.ModelForm):
 	class Meta:
@@ -31,3 +31,18 @@ class ReparacionesForm(forms.ModelForm):
 		'costo': forms.TextInput(attrs={'class': 'form-control', 'type': 'number'}),
 		'clientes': forms.Select(attrs={'class': 'form-control fill'}),		
 		}								
+
+class RepuestosForm(forms.ModelForm):
+	class Meta:
+		model = Repuestos
+		fields = '__all__'
+		widgets = {
+		'codifo'
+		'nombre'
+		'marca'
+		'modelo'
+		'cantidad'
+		'preciomayor'
+		'preciounidad'
+		'reparaciones': forms.Select(attrs={'class': 'forms-control fill'}),
+		}

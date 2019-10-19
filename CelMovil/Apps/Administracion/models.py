@@ -75,7 +75,7 @@ class Repuestos(models.Model):
     modificar = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.nombre    
+        return '%s %s %s' % (self.nombre, self.marca, self.reparaciones)    
 
 class Ventas(models.Model):
     clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones 
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones, ListarRepuestos, CrearRepuestos, ActualizarRepuestos, EliminarRepuestos 
 
 app_name = 'Administracion'
 
@@ -55,4 +55,11 @@ urlpatterns = [
     path('ActualizarReparaciones/<int:pk>/', ActualizarReparaciones.as_view(), name='ActualizarReparaciones'),
     path('EliminarReparaciones/<int:pk>/', EliminarReparaciones.as_view(), name='EliminarReparaciones'),
     # Fin de urls de Reparaciones
+
+    # Urls de Repuestos
+    path('ListarRepuestos/', ListarRepuestos.as_view(), name='ListarRepuestos'),
+    path('CrearRepuestos/', CrearRepuestos.as_view(), name='CrearRepuestos'),
+    path('ActualizarRepuestos/<int:pk>/', ActualizarRepuestos.as_view(), name='ActualizarRepuestos'),
+    path('EliminarRepuestos/<int:pk>/', EliminarRepuestos.as_view(), name='EliminarRepuestos'),
+    # Fin de urls de Repuestos
 ]
