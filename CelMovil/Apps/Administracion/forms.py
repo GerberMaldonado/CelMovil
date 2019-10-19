@@ -24,4 +24,10 @@ class ChipsForm(forms.ModelForm):
 class ReparacionesForm(forms.ModelForm):
 	class Meta:
 		model = Reparaciones
-		fields = '__all__'						
+		fields = '__all__'
+		widgets = {
+		'descripcionfalla': forms.TextInput(attrs={'class': 'form-control', 'type': 'text'}),
+		'fechasalida': forms.TextInput(attrs={'class': 'form-control', 'type': 'date'}),
+		'costo': forms.TextInput(attrs={'class': 'form-control', 'type': 'number'}),
+		'clientes': forms.Select(attrs={'class': 'form-control fill'}),		
+		}								
