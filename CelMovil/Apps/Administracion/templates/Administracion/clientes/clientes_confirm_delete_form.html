@@ -24,7 +24,7 @@
             <form action="" method="post">{% csrf_token %}
                 <p>¿Estás seguro de que quieres borrar <b>"{{ object }}"</b>?</p>
 				<button class="btn btn-danger" type="submit">Sí, Eliminar</button>
-				<a class= "btn btn-default" href="{% url 'Administracion:ListarClientes'%}">Cancelar</a>		
+				<a class= "btn btn-default" href="{% url 'Administracion:ListarCliente'%}">Cancelar</a>		
             </form>
 			</div>
 		</div>

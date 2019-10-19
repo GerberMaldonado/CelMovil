@@ -42,42 +42,41 @@
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Marca</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese la marca del repuesto">
+							{{ form.marca }}
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Modelo</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="modelo" name="modelo" placeholder="Ingrese el modelo del repuesto">
+							{{ form.modelo }}
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Cantidad</label>
 						<div class="col-sm-10">
-							<input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad del repuesto">
+							{{ form.cantidad }}
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Preciomayor</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="preciomayor" name="preciomayor" placeholder="Ingrese el precio por mayor">
+							{{ form.preciomayor }}
 							<span class="messages"></span>
 						</div>
 					</div><div class="form-group row">
 						<label class="col-sm-2 col-form-label">Preciomenor</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="preciomenor" name="preciomenor" placeholder="Ingrese el precio por menor">
+							{{ form.preciounidad }}
 							<span class="messages"></span>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Reparaciones</label>
 						<div class="col-sm-10">
-							{{ form.reparaciones }}	
-							
+							{{ form.reparaciones }}								
 							<span class="messages"></span>
 						</div>
 					</div>
