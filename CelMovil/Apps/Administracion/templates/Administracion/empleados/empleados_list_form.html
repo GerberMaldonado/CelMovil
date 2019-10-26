@@ -1,0 +1,80 @@
+{% extends 'Administracion/index.html' %}
+{% block header %}
+<h5>Listado de Empleados</h5>
+<span>Aquí puede visualizar en un listado todos los empleados.</span>	
+{% endblock %}
+
+{% block home %}
+<li class="breadcrumb-item">
+        <a href="">Empleados</a> 																		
+    </li>
+	<li class="breadcrumb-item">
+        <a href="">Listado de Empleados</a> 																
+    </li>	  
+{% endblock %}
+
+{% block contenido %}
+<div class="card">
+    <div class="card-header">    
+        <h5>Listado de los Empleados</h5>
+        <a href="{% url 'Administracion:CrearEmpleados' %}">                             
+            <button type="submit" class="btn btn-danger float-right">Nuevo Empleado</button>
+        </a>                    
+    </div>
+    <div class="card-block">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="example-1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>DPI</th>
+                        <th>Telefono</th>
+                        <th>Rol</th>
+                        <th>Fecha Creación</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for emp in object_list %}
+                    <tr>                        
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.id }}</span>                            
+                        </td>                     
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.dpi }}</span>                        
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.telefono }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.rol }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.creacion }}</span>
+                        </td>                                                   
+                        <td>
+                            <div style="text-align: left;">
+                                <div class="btn-group btn-group-sm">
+                                    <a href="{% url 'Administracion:ActualizarEmpleados' emp.id %}">
+                                        <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">          
+                                            <span class="icon-pencil">                  
+                                            </span>
+                                        </button>
+                                    </a> 
+                                    <a href="{% url 'Administracion:EliminarEmpleados' emp.id %}">
+                                        <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">
+                                            <span class="icon-trash-o">                                  
+                                            </span>                                                  
+                                        </button>
+                                    </a> 
+                                </div>
+                            </div>
+                        </td>                        
+                    </tr>         
+                    {% endfor %}            
+                </tbody>
+            </table>
+        </div>        
+    </div>
+</div>
+{% endblock %}

@@ -1,10 +1,15 @@
 from django import forms
-from .models import Accesorios, Clientes, Celulares, Chips, Reparaciones, Repuestos
+from .models import Accesorios, Empleados, Clientes, Celulares, Chips, Reparaciones, Repuestos, Ventas
 
 class AccesoriosForm(forms.ModelForm):
 	class Meta:
 		model = Accesorios
 		fields = '__all__'
+
+class EmpleadosForm(forms.ModelForm):
+	class Meta:
+		model = Empleados
+		fields = '__all__'		
 
 class ClientesForm(forms.ModelForm):
 	class Meta:
@@ -46,3 +51,12 @@ class RepuestosForm(forms.ModelForm):
 		'preciounidad': forms.TextInput(attrs={'class': 'form-control', 'type': 'number'}),
 		'reparaciones': forms.Select(attrs={'class': 'forms-control fill'}),
 		}
+
+class VentasForm(forms.ModelForm):
+	class Meta:
+		model = Ventas
+		fields = '__all__'
+		widgets = {
+        'clientes': forms.Select(attrs={'class': 'form-control fill'}),
+		'empleados': forms.Select(attrs={'class': 'form-control fill'}),
+		}		

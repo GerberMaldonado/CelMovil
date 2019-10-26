@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones, ListarRepuestos, CrearRepuestos, ActualizarRepuestos, EliminarRepuestos 
+from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesorio, EliminarAccesorio, ListarEmpleados, CrearEmpleados, ActualizarEmpleados, EliminarEmpleados, ListarCliente, CrearCliente, ActualizarCliente, EliminarCliente, ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones, ListarRepuestos, CrearRepuestos, ActualizarRepuestos, EliminarRepuestos, ListarVentas, CrearVentas, ActualizarVentas, EliminarVentas 
 
 app_name = 'Administracion'
 
@@ -28,6 +28,13 @@ urlpatterns = [
     path('EliminarAccesorio/<int:pk>/', EliminarAccesorio.as_view(), name='EliminarAccesorio'),
     # Fin de urls de Accesorios
     
+    # Urls de Empleados
+    path('ListarEmpleados/', ListarEmpleados.as_view(), name='ListarEmpleados'),
+    path('CrearEmpleados/', CrearEmpleados.as_view(), name='CrearEmpleados'),
+    path('ActualizarEmpleados/<int:pk>/', ActualizarEmpleados.as_view(), name='ActualizarEmpleados'),
+    path('EliminarEmpleados/<int:pk>/', EliminarEmpleados.as_view(), name='EliminarEmpleados'),
+    # Fin de urls de Empleados
+
     # Urls de Clientes
     path('ListarCliente/', ListarCliente.as_view(), name='ListarCliente'),
     path('CrearCliente/', CrearCliente.as_view(), name='CrearCliente'),
@@ -62,4 +69,11 @@ urlpatterns = [
     path('ActualizarRepuestos/<int:pk>/', ActualizarRepuestos.as_view(), name='ActualizarRepuestos'),
     path('EliminarRepuestos/<int:pk>/', EliminarRepuestos.as_view(), name='EliminarRepuestos'),
     # Fin de urls de Repuestos
+
+    # Urls de Ventas
+    path('ListarVentas/', ListarVentas.as_view(), name='ListarVentas'),
+    path('CrearVentas/', CrearVentas.as_view(), name='CrearVentas'),
+    path('ActualizarVentas/<int:pk>/', ActualizarVentas.as_view(), name='ActualizarVentas'),
+    path('EliminarVentas/<int:pk>/', EliminarVentas.as_view(), name='EliminarVentas'),
+    # Fin de urls de Ventas
 ]

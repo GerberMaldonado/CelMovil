@@ -1,0 +1,84 @@
+{% extends 'Administracion/index.html' %}
+{% block header %}
+<h5>Listado de Detalle_Ventas</h5>
+<span>Aquí puede visualizar en un listado el detalle_ventas.</span>	
+{% endblock %}
+
+{% block home %}
+<li class="breadcrumb-item">
+        <a href="">Detalle_Ventas</a> 																		
+    </li>
+	<li class="breadcrumb-item">
+        <a href="">Listado Detalle_Ventas</a> 																
+    </li>	  
+{% endblock %}
+
+{% block contenido %}
+<div class="card">
+    <div class="card-header">    
+        <h5>Listado del Detalle_Ventas</h5>
+        <a href="{% url 'Administracion:CrearDetalle_Ventas' %}">                             
+            <button type="submit" class="btn btn-danger float-right">Nuevo Detalle_Venta</button>
+        </a>                    
+    </div>
+    <div class="card-block">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="example-1">
+                <thead>
+                    <tr>
+                        <th>Accesorios</th>
+                        <th>Celulares</th>
+                        <th>Chips</th>
+                        <th>Reparaciones</th>
+                        <th>Ventas</th>
+                        <th>Fecha Creación</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for deta in object_list %}
+                    <tr>                        
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ deta.accesorios }}</span>
+                        </td>                     
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ deta.celulares }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ deta.chips }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ deta.reparaciones }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ deta.ventas }}</span>
+                        </td>
+                            <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ repu.creacion }}</span>
+                        </td>                                                   
+                        <td>
+                            <div style="text-align: left;">
+                                <div class="btn-group btn-group-sm">
+                                    <a href="{% url 'Administracion:ActualizarDetalle_Ventas' deta.id %}">
+                                        <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">          
+                                            <span class="icon-pencil">                  
+                                            </span>
+                                        </button>
+                                    </a> 
+                                    <a href="{% url 'Administracion:EliminarDetalle_Ventas' deta.id %}">
+                                        <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">
+                                            <span class="icon-trash-o">                                  
+                                            </span>                                                  
+                                        </button>
+                                    </a> 
+                                </div>
+                            </div>
+                        </td>                        
+                    </tr>         
+                    {% endfor %}            
+                </tbody>
+            </table>
+        </div>        
+    </div>
+</div>
+{% endblock %}

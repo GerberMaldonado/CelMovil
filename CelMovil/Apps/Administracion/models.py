@@ -19,6 +19,9 @@ class Empleados(models.Model):
     telefono = models.IntegerField()
     rol = models.CharField(max_length=50)
 
+    def __str__(self):
+        return '%s %s %s' % (self.dpi, self.telefono, self.rol)
+    
 class Celulares(models.Model):
     codigo = models.CharField(max_length=50)
     marca = models.CharField(max_length=25)
@@ -79,7 +82,10 @@ class Repuestos(models.Model):
 
 class Ventas(models.Model):
     clientes = models.ForeignKey(Clientes, on_delete=models.DO_NOTHING)
-    empleados = models.ForeignKey(Empleados, on_delete=models.DO_NOTHING)           
+    empleados = models.ForeignKey(Empleados, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return '%s %s' % (self.clientes, self.empleados)           
     
 class DetalleVentas(models.Model):
     accesorios = models.ForeignKey(Accesorios, on_delete=models.DO_NOTHING, null=True, blank=True)
@@ -88,4 +94,6 @@ class DetalleVentas(models.Model):
     reparaciones = models.ForeignKey(Reparaciones, on_delete=models.DO_NOTHING, null=True, blank=True)
     ventas = models.ForeignKey(Ventas, on_delete=models.DO_NOTHING, null=True, blank=True)    
     creacion = models.DateTimeField(auto_now_add=True)
-    modificar = models.DateTimeField(auto_now=True)  
+    modificar = models.DateTimeField(auto_now=True)
+
+      

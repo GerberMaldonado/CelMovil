@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, CreateView, ListView, UpdateView, DeleteView
-from .forms import AccesoriosForm, ClientesForm, CelularesForm, ChipsForm, ReparacionesForm, RepuestosForm
-from .models import Accesorios, Clientes, Celulares, Chips, Reparaciones, Repuestos
+from .forms import AccesoriosForm, EmpleadosForm, ClientesForm, CelularesForm, ChipsForm, ReparacionesForm, RepuestosForm, VentasForm
+from .models import Accesorios, Empleados, Clientes, Celulares, Chips, Reparaciones, Repuestos, Ventas
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
 # Create your views here.
@@ -40,6 +40,32 @@ class EliminarAccesorio(StaffRequiredMixin, DeleteView):
     form_class = AccesoriosForm    
     success_url = reverse_lazy('Administracion:ListarAccesorio')
 #Fin de Vistas de CRUD Accesorios
+
+# Vistas para el CRUD de Empleados
+class ListarEmpleados(StaffRequiredMixin, ListView):
+    template_name = 'Administracion/empleados/empleados_list_form.html'
+    model = Empleados
+    
+    def get_queryset(self):
+        return Empleados.objects.all()
+
+class CrearEmpleados(StaffRequiredMixin, CreateView):
+    template_name='Administracion/empleados/empleados_create_form.html'
+    form_class = EmpleadosForm
+    success_url = reverse_lazy('Administracion:ListarEmpleados')
+
+class ActualizarEmpleados(StaffRequiredMixin, UpdateView):
+    model = Empleados
+    form_class = EmpleadosForm
+    template_name_suffix = '/empleados_update_form'
+    success_url = reverse_lazy('Administracion:ListarEmpleados')
+
+class EliminarEmpleados(StaffRequiredMixin, DeleteView):
+    template_name='Administracion/empleados/empleados_confirm_delete_form.html'   
+    model = Empleados
+    form_class = EmpleadosForm    
+    success_url = reverse_lazy('Administracion:ListarEmpleados')
+#Fin de Vistas de CRUD Empleados
 
 # Vistas para el CRUD de Clientes
 class ListarCliente(StaffRequiredMixin, ListView):
@@ -170,3 +196,29 @@ class EliminarRepuestos(StaffRequiredMixin, DeleteView):
     form_class = RepuestosForm    
     success_url = reverse_lazy('Administracion:ListarRepuestos')
 #Fin de Vistas de CRUD Repuestos
+
+# Vistas para el CRUD de Ventas
+class ListarVentas(StaffRequiredMixin, ListView):
+    template_name = 'Administracion/ventas/ventas_list_form.html'
+    model = Ventas
+    
+    def get_queryset(self):
+        return Ventas.objects.all()
+
+class CrearVentas(StaffRequiredMixin, CreateView):
+    template_name='Administracion/ventas/ventas_create_form.html'
+    form_class = VentasForm
+    success_url = reverse_lazy('Administracion:ListarVentas')
+
+class ActualizarVentas(StaffRequiredMixin, UpdateView):
+    model = Ventas
+    form_class = VentasForm
+    template_name_suffix = '/ventas_update_form'
+    success_url = reverse_lazy('Administracion:ListarVentas')
+
+class EliminarVentas(StaffRequiredMixin, DeleteView):
+    template_name='Administracion/ventas/ventas_confirm_delete_form.html' 
+    model = Ventas
+    form_class = VentasForm    
+    success_url = reverse_lazy('Administracion:ListarVentas')
+#Fin de Vistas de CRUD Ventas
