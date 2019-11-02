@@ -1,5 +1,6 @@
-{% load static%}
-{% load staticfiles %}
+{% extends 'Principal/index.html' %}
+{% load static i18n %}
+{% block principal %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,6 +104,8 @@
 
 </body>
 </html>
+
+{% endblock %}
 
 <!--
 <!DOCTYPE html>

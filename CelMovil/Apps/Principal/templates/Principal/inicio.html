@@ -1,5 +1,6 @@
-{% load staticfiles i18n %}
-
+{% extends 'Principal/index.html' %}
+{% load static i18n %}
+{% block principal %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,10 +56,6 @@ height: 625px;
 
 }
 
-{% block index.html %}
-
-{% endblock %}
-
 </style>
 </head>
 <body>
@@ -81,3 +78,4 @@ BIENVENIDOS A NUESTRA PAGINA
 
 </body>
 </html>
+{% endblock %}
