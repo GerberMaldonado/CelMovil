@@ -5,7 +5,7 @@ from django import forms
 
 class SignUpView(CreateView):
     form_class = UserCreationFormWithEmail    
-    template_name = 'registration/register.html'
+    template_name = 'Registration/register.html'
 
     def get_success_url(self):
         return reverse_lazy('Administracion:Home') + '?register'  
