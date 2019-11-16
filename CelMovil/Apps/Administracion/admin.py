@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Accesorios,Celulares,Chips,Clientes,DetalleVentas,Reparaciones,Repuestos,Empleados,Ventas
+from .models import Accesorio,Celular,Chip,Cliente,DetalleVenta,Reparacion,Repuesto,Empleado,Venta
 # Register your models here.
 
-admin.site.register(Accesorios)
-admin.site.register(Celulares)
-admin.site.register(Chips)
-admin.site.register(Clientes)
-admin.site.register(DetalleVentas)
-admin.site.register(Reparaciones)
-admin.site.register(Repuestos)
-admin.site.register(Empleados)
-admin.site.register(Ventas)
+admin.site.register(Accesorio)
+admin.site.register(Celular)
+admin.site.register(Chip)
+admin.site.register(Cliente)
+admin.site.register(DetalleVenta)
+admin.site.register(Reparacion)
+admin.site.register(Repuesto)
+admin.site.register(Empleado)
+admin.site.register(Venta)

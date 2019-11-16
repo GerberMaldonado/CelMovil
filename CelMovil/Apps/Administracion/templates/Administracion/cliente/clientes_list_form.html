@@ -1,25 +1,28 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Celulares</h5>
-<span>Aquí puede visualizar en un listado todos los celulares.</span>	
+<h5>Listado de Clientes</h5>
+<span>Aquí puede visualizar en un listado todos los clientes.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Celulares</a> 																						
+        <a href="">Clientes</a> 																						
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Celulares</a> 																						
+        <a href="">Listado de Clientes</a> 																						
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de los Celulares</h5>
-        <a href="{% url 'Administracion:CrearCelulares' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Celular</button>
-        </a>                    
+        <h5>Listado de los Clientes</h5>
+        <a href="{% url 'Administracion:CrearCliente' %}">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nuevo Cliente</button>
+        </a> 
+        <a href="{% url 'Administracion:reporte_cliente' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                         
     </div>
     <div class="card-block">
         <div class="table-responsive">
@@ -27,52 +30,56 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Codigo</th>
-                        <th>Marca</th>
-                        <th>Serie imei</th>
-                        <th>Precio mayor</th>
-                        <th>Precio unidad</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Telefono</th>
+                        <th>DPI</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for cel in object_list %}
+                    {% for cli in object_list %}
                     <tr>                        
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.id }}</span>                            
-                        </td>
-                        <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.codigo }}</span>                            
+                            <span class="tabledit-span">{{ cli.id }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.marca }}</span>                            
+                            <span class="tabledit-span">{{ cli.nombre }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.serieimei }}</span>                            
+                            <span class="tabledit-span">{{ cli.apellido }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.preciomayor }}</span>                            
+                            <span class="tabledit-span">{{ cli.telefono }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.preciounidad }}</span>                           
+                            <span class="tabledit-span">{{ cli.dpi }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ cel.creacion }}</span>                            
+                            <span class="tabledit-span">{{ cli.email }}</span>                            
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ cli.direccion }}</span>                            
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ cli.creacion }}</span>                            
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarCelulares' cel.id %}">
+                                    <a href="{% url 'Administracion:ActualizarCliente' cli.id %}">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-pencil">                                                   
-                                            </span>                                                                                                                           
+                                            </span>                                                                                                                         
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarCelulares' cel.id %}">
+                                    <a href="{% url 'Administracion:EliminarCliente' cli.id %}">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">                                                                                    
                                             <span class="icon-trash-o">                                                   
-                                            </span>                                                                                                                           
+                                            </span>                                                                                                                         
                                         </button>
                                     </a> 
                                 </div>

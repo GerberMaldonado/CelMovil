@@ -1,25 +1,28 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Reparaciones</h5>
-<span>Aquí puede visualizar en un listado todas las reparaciones.</span>	
+<h5>Listado de Repuestos</h5>
+<span>Aquí puede visualizar en un listado todas los repuestos.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Reparaciones</a> 																		
+        <a href="">Repuestos</a> 																		
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Reparaciones</a> 																
+        <a href="">Listado de Repuestos</a> 																
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de las Reparaciones</h5>
-        <a href="{% url 'Administracion:CrearReparaciones' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nueva Reparacion</button>
-        </a>                    
+        <h5>Listado de los Repuestos</h5>
+        <a href="{% url 'Administracion:CrearRepuestos' %}">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nuevo Repuesto</button>
+        </a>
+        <a href="{% url 'Administracion:reporte_repuesto' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                              
     </div>
     <div class="card-block">
         <div class="table-responsive">
@@ -27,45 +30,61 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Descripcion Falla</th>
-                        <th>Salida</th>
-                        <th>Costo</th>
-                        <th>Cliente</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Cantidad</th>
+                        <th>Precio mayor</th>
+                        <th>Precio unidad</th>
+                        <th>Reparaciones</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for rep in object_list %}
+                    {% for repu in object_list %}
                     <tr>                        
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.id }}</span>                            
+                            <span class="tabledit-span">{{ repu.id }}</span>
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.descripcionfalla }}</span>                        
+                            <span class="tabledit-span">{{ repu.codigo }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.fechasalida }}</span>
+                            <span class="tabledit-span">{{ repu.nombre }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.costo }}</span>
+                            <span class="tabledit-span">{{ repu.marca }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.clientes }}</span>                           
+                            <span class="tabledit-span">{{ repu.modelo }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ rep.creacion }}</span>
+                            <span class="tabledit-span">{{ repu.cantidad }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ repu.preciomayor }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ repu.preciounidad }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ repu.reparaciones }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ repu.creacion }}</span>
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarReparaciones' rep.id %}">
+                                    <a href="{% url 'Administracion:ActualizarRepuestos' repu.id %}">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">          
                                             <span class="icon-pencil">                  
                                             </span>
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarReparaciones' rep.id %}">
+                                    <a href="{% url 'Administracion:EliminarRepuestos' repu.id %}">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">
                                             <span class="icon-trash-o">                                  
                                             </span>                                                  

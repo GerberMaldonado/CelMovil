@@ -1,25 +1,28 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Ventas</h5>
-<span>Aquí puede visualizar en un listado todas las ventas.</span>	
+<h5>Listado de Empleados</h5>
+<span>Aquí puede visualizar en un listado todos los empleados.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Ventas</a> 																		
+        <a href="">Empleados</a> 																		
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Ventas</a> 																
+        <a href="">Listado de Empleados</a> 																
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de las Ventas</h5>
-        <a href="{% url 'Administracion:CrearVentas' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nueva Venta</button>
-        </a>                    
+        <h5>Listado de los Empleados</h5>
+        <a href="{% url 'Administracion:CrearEmpleados' %}">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nuevo Empleado</button>
+        </a>
+        <a href="{% url 'Administracion:reporte_empleado' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                      
     </div>
     <div class="card-block">
         <div class="table-responsive">
@@ -27,37 +30,49 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Clientes</th>
-                        <th>Empleados</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DPI</th>
+                        <th>Telefono</th>
+                        <th>Rol</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for ven in object_list %}
-                    <tr>                        
+                    {% for emp in object_list %}
+                    <tr>                    
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ ven.id }}</span>
+                            <span class="tabledit-span">{{ emp.id }}</span>                            
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.nombre }}</span>                            
+                        </td>                                
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.apellido }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ ven.clientes }}</span>
+                            <span class="tabledit-span">{{ emp.dpi }}</span>                        
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ ven.empleados }}</span>
+                            <span class="tabledit-span">{{ emp.telefono }}</span>
                         </td>
-                            <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ repu.creacion }}</span>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.rol }}</span>
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ emp.creacion }}</span>
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarVentas' ven.id %}">
+                                    <a href="{% url 'Administracion:ActualizarEmpleados' emp.id %}">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">          
                                             <span class="icon-pencil">                  
                                             </span>
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarVentas' ven.id %}">
+                                    <a href="{% url 'Administracion:EliminarEmpleados' emp.id %}">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">
                                             <span class="icon-trash-o">                                  
                                             </span>                                                  

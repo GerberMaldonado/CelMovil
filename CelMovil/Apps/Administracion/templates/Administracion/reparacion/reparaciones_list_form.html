@@ -1,25 +1,28 @@
 {% extends 'Administracion/index.html' %}
 {% block header %}
-<h5>Listado de Empleados</h5>
-<span>Aquí puede visualizar en un listado todos los empleados.</span>	
+<h5>Listado de Reparaciones</h5>
+<span>Aquí puede visualizar en un listado todas las reparaciones.</span>	
 {% endblock %}
 
 {% block home %}
 <li class="breadcrumb-item">
-        <a href="">Empleados</a> 																		
+        <a href="">Reparaciones</a> 																		
     </li>
 	<li class="breadcrumb-item">
-        <a href="">Listado de Empleados</a> 																
+        <a href="">Listado de Reparaciones</a> 																
     </li>	  
 {% endblock %}
 
 {% block contenido %}
 <div class="card">
     <div class="card-header">    
-        <h5>Listado de los Empleados</h5>
-        <a href="{% url 'Administracion:CrearEmpleados' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Empleado</button>
-        </a>                    
+        <h5>Listado de las Reparaciones</h5>
+        <a href="{% url 'Administracion:CrearReparaciones' %}">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nueva Reparacion</button>
+        </a>
+        <a href="{% url 'Administracion:reporte_reparacion' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                             
     </div>
     <div class="card-block">
         <div class="table-responsive">
@@ -27,41 +30,45 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>DPI</th>
-                        <th>Telefono</th>
-                        <th>Rol</th>
+                        <th>Descripcion Falla</th>
+                        <th>Salida</th>
+                        <th>Costo</th>
+                        <th>Cliente</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for emp in object_list %}
+                    {% for rep in object_list %}
                     <tr>                        
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ emp.id }}</span>                            
+                            <span class="tabledit-span">{{ rep.id }}</span>                            
                         </td>                     
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ emp.dpi }}</span>                        
+                            <span class="tabledit-span">{{ rep.descripcionfalla }}</span>                        
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ emp.telefono }}</span>
+                            <span class="tabledit-span">{{ rep.fechasalida }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ emp.rol }}</span>
+                            <span class="tabledit-span">{{ rep.costo }}</span>
                         </td>
                         <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ emp.creacion }}</span>
+                            <span class="tabledit-span">{{ rep.clientes }}</span>                           
+                        </td>
+                        <td class="tabledit-view-mode">
+                            <span class="tabledit-span">{{ rep.creacion }}</span>
                         </td>                                                   
                         <td>
                             <div style="text-align: left;">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{% url 'Administracion:ActualizarEmpleados' emp.id %}">
+                                    <a href="{% url 'Administracion:ActualizarReparaciones' rep.id %}">
                                         <button type="button" class="btn btn-primary btn-sm" style="float: none;margin: 0px;">          
                                             <span class="icon-pencil">                  
                                             </span>
                                         </button>
                                     </a> 
-                                    <a href="{% url 'Administracion:EliminarEmpleados' emp.id %}">
+                                    <a href="{% url 'Administracion:EliminarReparaciones' rep.id %}">
                                         <button type="button" class="btn btn-danger btn-sm" style="float: none;margin: 0px;">
                                             <span class="icon-trash-o">                                  
                                             </span>                                                  

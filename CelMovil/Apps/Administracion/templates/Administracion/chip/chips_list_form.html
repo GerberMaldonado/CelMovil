@@ -18,8 +18,11 @@
     <div class="card-header">    
         <h5>Listado de los Chips</h5>
         <a href="{% url 'Administracion:CrearChips' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Chip</button>
-        </a>                    
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nuevo Chip</button>
+        </a>
+        <a href="{% url 'Administracion:reporte_chip' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                        
     </div>
     <div class="card-block">
         <div class="table-responsive">

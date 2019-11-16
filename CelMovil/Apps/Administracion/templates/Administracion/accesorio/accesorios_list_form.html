@@ -18,8 +18,11 @@
     <div class="card-header">    
         <h5>Listado de los Accesorios</h5>
         <a href="{% url 'Administracion:CrearAccesorio' %}">                             
-            <button type="submit" class="btn btn-danger float-right">Nuevo Accesorio</button>
-        </a>                    
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Nuevo Accesorio</button>
+        </a>
+        <a href="{% url 'Administracion:reporte_accesorio' %}" target="_blank">                             
+            <button type="submit" class="btn btn-danger float-right" style="margin: 1px">Generar Reporte</button>
+        </a>                        
     </div>
     <div class="card-block">
         <div class="table-responsive">
@@ -31,7 +34,6 @@
                         <th>Nombre</th>
                         <th>Marca</th>
                         <th>Cantidad</th>
-                        <th>Fecha Ingreso</th>
                         <th>Fecha Creación</th>
                         <th>Opciones</th>
                     </tr>
@@ -53,9 +55,6 @@
                         </td>
                         <td class="tabledit-view-mode">
                             <span class="tabledit-span">{{ est.cantidad }}</span>                            
-                        </td>
-                        <td class="tabledit-view-mode">
-                            <span class="tabledit-span">{{ est.fechaingreso }}</span>                            
                         </td>
                         <td class="tabledit-view-mode">
                             <span class="tabledit-span">{{ est.creacion }}</span>                            

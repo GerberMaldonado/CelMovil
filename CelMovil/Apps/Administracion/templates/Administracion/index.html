@@ -57,22 +57,11 @@
 								<div class="dropdown-primary dropdown">
 									<div class="dropdown-toggle" data-toggle="dropdown">
 										<i class="feather icon-bell"></i>
-										<span class="badge bg-c-red">5</span>
 									</div>
 									<ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
 										<li>
 											<h6>Notificaciones</h6>
 											<label class="label label-danger">Nueva</label>
-										</li>
-										<li>
-											<div class="media">
-												<img class="img-radius" src="{% static 'Administracion/img/avatar-4.jpg' %}" alt="Generic placeholder image">
-												<div class="media-body">
-													<h5 class="notification-user">John Doe</h5>
-													<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-													<span class="notification-time">30 minutes ago</span>
-												</div>
-											</div>
 										</li>
 									</ul>
 								</div>
@@ -81,14 +70,13 @@
 								<div class="dropdown-primary dropdown">
 									<div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
 										<i class="feather icon-message-square"></i>
-										<span class="badge bg-c-green">3</span>
 									</div>
 								</div>
 							</li>
 							<li class="user-profile header-notification">
 								<div class="dropdown-primary dropdown">
 									<div class="dropdown-toggle" data-toggle="dropdown">
-										<img src="{% static 'Administracion/img/avatar-4.jpg' %}" class="img-radius" alt="User-Profile-Image">
+										<img src="{% static 'Administracion/img/avatar-4.png' %}" class="img-radius" alt="User-Profile-Image">
 										<span>{{ user.username }}</span>
 										<i class="feather icon-chevron-down"></i>
 									</div>
@@ -96,11 +84,6 @@
 										<li>
 											<a href="">
 												<i class="feather icon-settings"></i> Configuraciones
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<i class="feather icon-user"></i> Perfil
 											</a>
 										</li>
 										<li>
@@ -258,11 +241,6 @@
 													<span class="pcoded-mtext">Registrar Ventas</span>
 												</a>
 											</li>
-											<li class="">
-												<a href="#" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Chart Widget</span>
-												</a>
-											</li>
 										</ul>
 									</li>
 								</ul>
@@ -283,12 +261,7 @@
 												<a href="{% url 'Administracion:CrearEmpleados' %}" class="waves-effect waves-dark">
 													<span class="pcoded-mtext">Registrar Empleados</span>
 												</a>
-											</li>
-											<li class="">
-												<a href="{% url 'Administracion:CrearEmpleados' %}" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Administradores</span>
-												</a>
-											</li>								
+											</li>							
 										</ul>
 									</li>	
 									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
@@ -299,7 +272,7 @@
 										<ul class="pcoded-submenu">
 											<li class="active">
 												<a href="{% url 'registro:signup' %}" class="waves-effect waves-dark">
-													<span class="pcoded-mtext">Usuarios</span>
+													<span class="pcoded-mtext">Registrar Usuarios</span>
 												</a>
 											</li>					
 										</ul>

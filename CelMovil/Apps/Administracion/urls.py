@@ -21,7 +21,8 @@ from .views import HomeView, ListarAccesorio, CrearAccesorio, ActualizarAccesori
     ListarCelulares, CrearCelulares, ActualizarCelulares, EliminarCelulares, ListarChips, CrearChips, ActualizarChips, \
     EliminarChips, ListarReparaciones, CrearReparaciones, ActualizarReparaciones, EliminarReparaciones, ListarRepuestos, \
     CrearRepuestos, ActualizarRepuestos, EliminarRepuestos, ListarVentas, CrearVentas, ActualizarVentas, EliminarVentas, \
-    generar_pdf_clientes 
+    generar_pdf_clientes, generar_pdf_celulares, generar_pdf_accesorios, generar_pdf_chips, generar_pdf_reparaciones, \
+    generar_pdf_repuestos, generar_pdf_empleados
 
 app_name = 'Administracion'
 
@@ -85,4 +86,10 @@ urlpatterns = [
 
     # Reporte
     path('reporte-cliente', login_required(generar_pdf_clientes), name='reporte_cliente'),
+    path('reporte-celular', login_required(generar_pdf_celulares), name='reporte_celular'),
+    path('reporte-accesorio', login_required(generar_pdf_accesorios), name='reporte_accesorio'),
+    path('reporte-chip', login_required(generar_pdf_chips), name='reporte_chip'),
+    path('reporte-reparacion', login_required(generar_pdf_reparaciones), name='reporte_reparacion'),
+    path('reporte-repuesto', login_required(generar_pdf_repuestos), name='reporte_repuesto'),
+    path('reporte-empleado', login_required(generar_pdf_empleados), name='reporte_empleado'),
 ]
