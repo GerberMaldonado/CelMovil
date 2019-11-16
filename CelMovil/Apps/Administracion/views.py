@@ -106,7 +106,7 @@ class ListarCelulares(ListView):
 		return Celular.objects.all()
 
 class CrearCelulares(CreateView):
-	template_name='Administracion/celulare/celulares_create_form.html'
+	template_name='Administracion/celular/celulares_create_form.html'
 	form_class = CelularesForm
 	success_url = reverse_lazy('Administracion:ListarCelulares')
 
